@@ -1,0 +1,254 @@
+{
+  "checked_at_utc": "2026-10-27T04:48:16.913728+00:00",
+  "editor_version": "6000.4.8f1",
+  "revision": "f8b72d3d7343",
+  "editor_path": "<UNITY_EDITOR_6000.4.8f1>\\Editor\\Unity.exe",
+  "validation_copy": "<VALIDATION_PROJECT>",
+  "original_repository": "<PROJECT_ROOT>",
+  "head": "871f806165eebb9e03ba944ed95db5af3dc83819",
+  "compilation": {
+    "csharp_error_lines": [],
+    "error_count": 0,
+    "import_log_return_code": 0,
+    "project_runtime_and_editor_assemblies_generated": true,
+    "log": "import-compile.log"
+  },
+  "new_regression_final": {
+    "discovered": 50,
+    "runnable": 50,
+    "executed": 50,
+    "passed": 50,
+    "failed": 0,
+    "skipped": 0,
+    "undiscovered": 0,
+    "names_not_executed": [],
+    "unexpected_names": [],
+    "final_evidence": "full-editmode-rerun-results.xml"
+  },
+  "all_editmode_final": {
+    "executed": 218,
+    "passed": 217,
+    "failed": 1,
+    "skipped": 0,
+    "existing_cases": 168,
+    "existing_passed": 167,
+    "existing_failed": 1,
+    "remaining_failure": "PPEInnerGloveHandTintTests.ApplyToHand_TintsThenRestoresDefaultHandColor",
+    "classification": "Unchanged existing test and tint source; reproduced in isolated fresh Editor process. Exact Color equality fails on measured float round-trip precision. No assertion or production behavior weakened."
+  },
+  "scene": {
+    "path": "Assets/Scenes/04_PPE.unity",
+    "gameobjects": 524,
+    "components": 1048,
+    "missing_script_count": 0,
+    "broken_reference_count": 0,
+    "scan_errors": [],
+    "limitations": "Loaded PPE scene only, including inactive objects. Not all scenes or physical headset execution."
+  },
+  "fixture_repairs": [
+    {
+      "path": "Assets/1.JSR/Editor/ResponseBagPackingTests.cs",
+      "reason": "EditMode fixture did not create XRRayInteractor attachTransform normally created by Awake; explicit child attach added before registration."
+    },
+    {
+      "path": "Assets/1.JSR/Editor/PPEPortfolioSequenceTests.cs",
+      "reason": "Guard now uses Unity null equality, accepting destroyed wrappers left by old fixtures while rejecting live loadout instances."
+    }
+  ],
+  "gameplay_runtime_changes_this_turn": false,
+  "tint_diagnostic": {
+    "expected_rgba": [
+      "0.378",
+      "0.495",
+      "0.492",
+      "1"
+    ],
+    "actual_rgba": [
+      "0.377999961",
+      "0.494999945",
+      "0.491999924",
+      "1"
+    ],
+    "maximum_channel_delta": 8.940696716308594e-08,
+    "headless_only_claim": false
+  },
+  "test_runs": [
+    {
+      "file": "new-50-results.xml",
+      "result": "Failed(Child)",
+      "total": 50,
+      "passed": 49,
+      "failed": 1,
+      "skipped": 0,
+      "inconclusive": 0,
+      "start_utc": "2026-10-27 04:38:15Z",
+      "end_utc": "2026-10-27 04:38:16Z",
+      "fixtures": {
+        "PPEPortfolioSequenceTests": {
+          "executed": 13,
+          "passed": 13
+        },
+        "PPEGlovePairStateTests": {
+          "executed": 17,
+          "passed": 17
+        },
+        "ResponseBagPackingTests": {
+          "executed": 20,
+          "passed": 19
+        }
+      },
+      "failures": [
+        {
+          "name": "ResponseBagPackingTests.ExplicitXriSelect_ConfirmsFullyPackedBag",
+          "message": "System.NullReferenceException : Object reference not set to an instance of an object",
+          "stack": "  at Unity.XR.CoreUtils.TransformExtensions.SetLocalPose (UnityEngine.Transform transform, UnityEngine.Pose pose) [0x00000] in .\\Library\\PackageCache\\com.unity.xr.core-utils@a8b900321199\\Runtime\\Extensions\\TransformExtensions.cs:49 \n  at UnityEngine.XR.Interaction.Toolkit.Interactors.XRRayInteractor.RestoreAttachTransform () [0x0000d] in .\\Library\\PackageCache\\com.unity.xr.interaction.toolkit@4612b35e2aac\\Runtime\\Interaction\\Interactors\\XRRayInteractor.cs:2869 \n  at UnityEngine.XR.Interaction.Toolkit.Interactors.XRRayInteractor.OnSelectExiting (UnityEngine.XR.Interaction.Toolkit.SelectExitEventArgs args) [0x00028] in .\\Library\\PackageCache\\com.unity.xr.interaction.toolkit@4612b35e2aac\\Runtime\\Interaction\\Interactors\\XRRayInteractor.cs:2804 \n  at UnityEngine.XR.Interaction.Toolkit.Interactors.XRBaseInteractor.UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor.OnSelectExiting (UnityEngine.XR.Interaction.Toolkit.SelectExitEventArgs args) [0x00000] in .\\Library\\PackageCache\\com.unity.xr.interaction.toolkit@4612b35e2aac\\Runtime\\Interaction\\Interactors\\XRBaseInteractor.cs:787 \n  at UnityEngine.XR.Interaction.Toolkit.XRInteractionManager.SelectExit (UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor interactor, UnityEngine.XR.Interaction.Toolkit.Interactables.IXRSelectInteractable interactable, UnityEngine.XR.Interaction.Toolkit.SelectExitEventArgs args) [0x00056] in .\\Library\\PackageCache\\com.unity.xr.interaction.toolkit@4612b35e2aac\\Runtime\\Interaction\\XRInteractionManager.cs:2554 \n  at UnityEngine.XR.Interaction.Toolkit.XRInteractionManager.SelectCancel (UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor interactor, UnityEngine.XR.Interaction.Toolkit.Interactables.IXRSelectInteractable interactable) [0x00032] in .\\Library\\PackageCache\\com.unity.xr.interaction.toolkit@4612b35e2aac\\Runtime\\Interaction\\XRInteractionManager.cs:2338 \n  at UnityEngine.XR.Interaction.Toolkit.XRInteractionManager.CancelInteractableSelection (UnityEngine.XR.Interaction.Toolkit.Interactables.IXRSelectInteractable interactable) [0x00010] in .\\Library\\PackageCache\\com.unity.xr.interaction.toolkit@4612b35e2aac\\Runtime\\Interaction\\XRInteractionManager.cs:2079 \n  at ResponseEquipmentManager.ClearXrInteraction (UnityEngine.GameObject bagRoot) [0x00059] in <VALIDATION_PROJECT>\\Assets\\1.JSR\\Scripts\\ResponseEquipmentManager.cs:1103 \n  at ResponseEquipmentManager.PrepareResponseBag (UnityEngine.GameObject bagRoot, System.Boolean deactivateRoot) [0x0007f] in <VALIDATION_PROJECT>\\Assets\\1.JSR\\Scripts\\ResponseEquipmentManager.cs:663 \n  at ResponseEquipmentManager.PrepareResponseBag (UnityEngine.GameObject bagRoot) [0x00000] in <VALIDATION_PROJECT>\\Assets\\1.JSR\\Scripts\\ResponseEquipmentManager.cs:637 \n  at ResponseEquipmentManager.TryCompleteResponseBagPreparation () [0x00042] in <VALIDATION_PROJECT>\\Assets\\1.JSR\\Scripts\\ResponseEquipmentManager.cs:711 \n  at ResponseBagPrepareInteractable.BeginPreparation () [0x00029] in <VALIDATION_PROJECT>\\Assets\\1.JSR\\Scripts\\ResponseBagPrepareInteractable.cs:326 \n  at ResponseBagPrepareInteractable.OnSelectEntered (UnityEngine.XR.Interaction.Toolkit.SelectEnterEventArgs args) [0x00054] in <VALIDATION_PROJECT>\\Assets\\1.JSR\\Scripts\\ResponseBagPrepareInteractable.cs:129 \n  at UnityEngine.Events.InvokableCall`1[T1].Invoke (T1 args0) [0x0000d] in <0ed212dbc30045708ade919c1a8365d7>:0 \n  at UnityEngine.Events.UnityEvent`1[T0].Invoke (T0 arg0) [0x0001b] in <0ed212dbc30045708ade919c1a8365d7>:0 \n  at UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable.OnSelectEntered (UnityEngine.XR.Interaction.Toolkit.SelectEnterEventArgs args) [0x00020] in .\\Library\\PackageCache\\com.unity.xr.interaction.toolkit@4612b35e2aac\\Runtime\\Interaction\\Interactables\\XRBaseInteractable.cs:1314 \n  at UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable.UnityEngine.XR.Interaction.Toolkit.Interactables.IXRSelectInteractable.OnSelectEntered (UnityEngine.XR.Interaction.Toolkit.SelectEnterEventArgs args) [0x00000] in .\\Library\\PackageCache\\com.unity.xr.interaction.toolkit@4612b35e2aac\\Runtime\\Interaction\\Interactables\\XRBaseInteractable.cs:1111 \n  at UnityEngine.XR.Interaction.Toolkit.XRInteractionManager.SelectEnter (UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor interactor, UnityEngine.XR.Interaction.Toolkit.Interactables.IXRSelectInteractable interactable, UnityEngine.XR.Interaction.Toolkit.SelectEnterEventArgs args) [0x0006b] in .\\Library\\PackageCache\\com.unity.xr.interaction.toolkit@4612b35e2aac\\Runtime\\Interaction\\XRInteractionManager.cs:2529 \n  at UnityEngine.XR.Interaction.Toolkit.XRInteractionManager.SelectEnterUnconditionally (UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor interactor, UnityEngine.XR.Interaction.Toolkit.Interactables.IXRSelectInteractable interactable) [0x0003e] in .\\Library\\PackageCache\\com.unity.xr.interaction.toolkit@4612b35e2aac\\Runtime\\Interaction\\XRInteractionManager.cs:2292 \n  at UnityEngine.XR.Interaction.Toolkit.XRInteractionManager.SelectEnter (UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor interactor, UnityEngine.XR.Interaction.Toolkit.Interactables.IXRSelectInteractable interactable) [0x0003e] in .\\Library\\PackageCache\\com.unity.xr.interaction.toolkit@4612b35e2aac\\Runtime\\Interaction\\XRInteractionManager.cs:2264 \n  at ResponseBagPackingTests.ExplicitXriSelect_ConfirmsFullyPackedBag () [0x00006] in <VALIDATION_PROJECT>\\Assets\\1.JSR\\Editor\\ResponseBagPackingTests.cs:301 \n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\n  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <f713e1c3c5f545ce9b1df47230f4f853>:0 "
+        }
+      ]
+    },
+    {
+      "file": "new-50-rerun-results.xml",
+      "result": "Passed",
+      "total": 50,
+      "passed": 50,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0,
+      "start_utc": "2026-10-27 04:40:13Z",
+      "end_utc": "2026-10-27 04:40:13Z",
+      "fixtures": {
+        "PPEPortfolioSequenceTests": {
+          "executed": 13,
+          "passed": 13
+        },
+        "PPEGlovePairStateTests": {
+          "executed": 17,
+          "passed": 17
+        },
+        "ResponseBagPackingTests": {
+          "executed": 20,
+          "passed": 20
+        }
+      },
+      "failures": []
+    },
+    {
+      "file": "full-editmode-results.xml",
+      "result": "Failed(Child)",
+      "total": 218,
+      "passed": 216,
+      "failed": 2,
+      "skipped": 0,
+      "inconclusive": 0,
+      "start_utc": "2026-10-27 04:41:04Z",
+      "end_utc": "2026-10-27 04:41:06Z",
+      "fixtures": {
+        "PPEPortfolioSequenceTests": {
+          "executed": 13,
+          "passed": 12
+        },
+        "PPEGlovePairStateTests": {
+          "executed": 17,
+          "passed": 17
+        },
+        "ResponseBagPackingTests": {
+          "executed": 20,
+          "passed": 20
+        }
+      },
+      "failures": [
+        {
+          "name": "PPEInnerGloveHandTintTests.ApplyToHand_TintsThenRestoresDefaultHandColor",
+          "message": "  Expected: RGBA(0.378, 0.495, 0.492, 1.000)\n  But was:  RGBA(0.378, 0.495, 0.492, 1.000)\n",
+          "stack": "at PPEInnerGloveHandTintTests.ApplyToHand_TintsThenRestoresDefaultHandColor () [0x00027] in <VALIDATION_PROJECT>\\Assets\\1.JSR\\Editor\\PPEInnerGloveHandTintTests.cs:19\n"
+        },
+        {
+          "name": "PPEPortfolioSequenceTests.RecordedPartialLoadout_RemainsAuthoritative_WhenRoomManagersAreMissing",
+          "message": "  Run in an empty EditMode test scene.\n  Expected: null\n  But was:  <null>\n",
+          "stack": "at PPEPortfolioSequenceTests.RecordedPartialLoadout_RemainsAuthoritative_WhenRoomManagersAreMissing () [0x00000] in <VALIDATION_PROJECT>\\Assets\\1.JSR\\Editor\\PPEPortfolioSequenceTests.cs:180\n"
+        }
+      ]
+    },
+    {
+      "file": "full-editmode-rerun-results.xml",
+      "result": "Failed(Child)",
+      "total": 218,
+      "passed": 217,
+      "failed": 1,
+      "skipped": 0,
+      "inconclusive": 0,
+      "start_utc": "2026-10-27 04:43:39Z",
+      "end_utc": "2026-10-27 04:43:41Z",
+      "fixtures": {
+        "PPEPortfolioSequenceTests": {
+          "executed": 13,
+          "passed": 13
+        },
+        "PPEGlovePairStateTests": {
+          "executed": 17,
+          "passed": 17
+        },
+        "ResponseBagPackingTests": {
+          "executed": 20,
+          "passed": 20
+        }
+      },
+      "failures": [
+        {
+          "name": "PPEInnerGloveHandTintTests.ApplyToHand_TintsThenRestoresDefaultHandColor",
+          "message": "  Expected: RGBA(0.378, 0.495, 0.492, 1.000)\n  But was:  RGBA(0.378, 0.495, 0.492, 1.000)\n",
+          "stack": "at PPEInnerGloveHandTintTests.ApplyToHand_TintsThenRestoresDefaultHandColor () [0x00027] in <VALIDATION_PROJECT>\\Assets\\1.JSR\\Editor\\PPEInnerGloveHandTintTests.cs:19\n"
+        }
+      ]
+    },
+    {
+      "file": "existing-tint-only-results.xml",
+      "result": "Failed(Child)",
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0,
+      "inconclusive": 0,
+      "start_utc": "2026-10-27 04:44:28Z",
+      "end_utc": "2026-10-27 04:44:28Z",
+      "fixtures": {
+        "PPEPortfolioSequenceTests": {
+          "executed": 0,
+          "passed": 0
+        },
+        "PPEGlovePairStateTests": {
+          "executed": 0,
+          "passed": 0
+        },
+        "ResponseBagPackingTests": {
+          "executed": 0,
+          "passed": 0
+        }
+      },
+      "failures": [
+        {
+          "name": "PPEInnerGloveHandTintTests.ApplyToHand_TintsThenRestoresDefaultHandColor",
+          "message": "  Expected: RGBA(0.378, 0.495, 0.492, 1.000)\n  But was:  RGBA(0.378, 0.495, 0.492, 1.000)\n",
+          "stack": "at PPEInnerGloveHandTintTests.ApplyToHand_TintsThenRestoresDefaultHandColor () [0x00027] in <VALIDATION_PROJECT>\\Assets\\1.JSR\\Editor\\PPEInnerGloveHandTintTests.cs:19\n"
+        }
+      ]
+    }
+  ],
+  "source_sha256": {
+    "Assets/1.JSR/Scripts/PPEGlovePairCoordinator.cs": "3b29f3e275ffaa33d9d1cb72a3b9130fb29da3891468022b577059cf618b6d6a",
+    "Assets/1.JSR/Scripts/PPEReleaseEquip.cs": "feddd3d26436124529af153f28c37cbad752d6cd9a50cbdc379c387f318dd81c",
+    "Assets/1.JSR/Scripts/ResponseBagPackingController.cs": "4ad6e73b83d65c7e5f4909c7f232d2074f8a0210b5445740810db1aaca549b1e",
+    "Assets/1.JSR/Scripts/ResponseBagPrepareInteractable.cs": "3ef7cae277d8d1e0b700449b9cc46c03ff86052f834ab29e5d99128c382b2d22",
+    "Assets/1.JSR/Scripts/XRInteractionConfirmRouter.cs": "1f23a9eb629855daa0277d4ad40914b8156a2fab76e05b78aad56890fb86bbe5",
+    "Assets/1.JSR/Editor/PPEPortfolioSequenceTests.cs": "1c302e30aa06b9b9f12afc5582da6a978d5a81fd98aa64180517596f90796be1",
+    "Assets/1.JSR/Editor/PPEGlovePairStateTests.cs": "234df258e2eb66dd81994a10109cb2f3bc7ebf10ed0786654b2c0f0095c94108",
+    "Assets/1.JSR/Editor/ResponseBagPackingTests.cs": "919d203832c6d85183b9bd89d6420518e829e45b076665447f23b379b7f8b920"
+  },
+  "not_executed": [
+    "PlayMode smoke",
+    "PCVR headset",
+    "Quest Android",
+    "Windows/Android build"
+  ],
+  "build_readiness": "Compile and new50 gates pass; full suite has one existing precision failure and VR manual checks remain. No new demo/release built.",
+  "commit_push_release": false
+}

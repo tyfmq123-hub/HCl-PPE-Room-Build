@@ -130,3 +130,12 @@ Recordings/
 
 # Download archives are published as GitHub release assets.
 /Dist/
+
+# Private raw validation and earlier local presentation versions are preserved locally.
+/docs/portfolio/validation/
+/docs/portfolio/03_JOB_APPLICATION_PORTFOLIO_KO.pptx
+/docs/portfolio/03_JOB_APPLICATION_PORTFOLIO_KO_VERIFIED_20261027.pptx
+/docs/portfolio/media/20261027-verified/gui-new-50-results.xml
+/docs/portfolio/media/20261027-verified/capture-provenance.json
+/docs/portfolio/media/20261027-verified/unity-test-runner-and-console.png
+/docs/portfolio/media/20261027-verified/unity-test-runner-fullscreen.png

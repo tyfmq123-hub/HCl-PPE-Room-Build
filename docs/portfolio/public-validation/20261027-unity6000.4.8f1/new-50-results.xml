@@ -1,0 +1,809 @@
+<?xml version='1.0' encoding='utf-8'?>
+<test-run id="2" testcasecount="50" result="Failed(Child)" total="50" passed="49" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:16Z" duration="0.2765982">
+  <test-suite type="TestSuite" id="1000" name="VR Test" fullname="VR Test" runstate="Runnable" testcasecount="218" result="Failed" site="Child" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:16Z" duration="0.276598" total="50" passed="49" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <failure>
+      <message>One or more child tests had errors</message>
+    </failure>
+    <test-suite type="Assembly" id="1155" name="Assembly-CSharp-Editor.dll" fullname="&lt;VALIDATION_PROJECT&gt;/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll" runstate="Runnable" testcasecount="129" result="Failed" site="Child" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:16Z" duration="0.268769" total="50" passed="49" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="39896" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <failure>
+        <message>One or more child tests had errors</message>
+      </failure>
+      <test-suite type="TestFixture" id="1001" name="PPEGlovePairStateTests" fullname="PPEGlovePairStateTests" classname="PPEGlovePairStateTests" runstate="Runnable" testcasecount="17" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.096435" total="17" passed="17" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="ParameterizedMethod" id="1007" name="BothSides_RegisterOneLogicalItemAndAdvanceOnce" fullname="PPEGlovePairStateTests.BothSides_RegisterOneLogicalItemAndAdvanceOnce" classname="PPEGlovePairStateTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.032926" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-case id="1005" name="BothSides_RegisterOneLogicalItemAndAdvanceOnce(Left)" fullname="PPEGlovePairStateTests.BothSides_RegisterOneLogicalItemAndAdvanceOnce(Left)" methodname="BothSides_RegisterOneLogicalItemAndAdvanceOnce" classname="PPEGlovePairStateTests" runstate="Runnable" seed="749166228" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.025353" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+            <output>[PPE Pair] CompleteSide Left Item=ChemicalGloves LeftEquipped=True RightEquipped=False PhysicalActive=False
+[PPE Pair] CompleteSide Right Item=ChemicalGloves LeftEquipped=True RightEquipped=True PhysicalActive=False
+[PPE Equipped] Test gloves
+[PPE Sequence] Donning completed. Phase changed: Donning → EquipmentPreparation
+[PPE Sequence] Phase: EquipmentPreparation Step: 1/2 Required: ResponseBag
+[PPE Pair] CompleteSide blocked by sequence. Item=ChemicalGloves Required=ResponseBag
+[PPE Pair] CompleteSide blocked by sequence. Item=ChemicalGloves Required=ResponseBag
+</output>
+          </test-case>
+          <test-case id="1006" name="BothSides_RegisterOneLogicalItemAndAdvanceOnce(Right)" fullname="PPEGlovePairStateTests.BothSides_RegisterOneLogicalItemAndAdvanceOnce(Right)" methodname="BothSides_RegisterOneLogicalItemAndAdvanceOnce" classname="PPEGlovePairStateTests" runstate="Runnable" seed="930083643" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.002691" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+            <output>[PPE Pair] CompleteSide Right Item=ChemicalGloves LeftEquipped=False RightEquipped=True PhysicalActive=False
+[PPE Pair] CompleteSide Left Item=ChemicalGloves LeftEquipped=True RightEquipped=True PhysicalActive=False
+[PPE Equipped] Test gloves
+[PPE Sequence] Donning completed. Phase changed: Donning → EquipmentPreparation
+[PPE Sequence] Phase: EquipmentPreparation Step: 1/2 Required: ResponseBag
+[PPE Pair] CompleteSide blocked by sequence. Item=ChemicalGloves Required=ResponseBag
+[PPE Pair] CompleteSide blocked by sequence. Item=ChemicalGloves Required=ResponseBag
+</output>
+          </test-case>
+        </test-suite>
+        <test-case id="1008" name="DuplicatePartialSide_DoesNotCountAsBothSides" fullname="PPEGlovePairStateTests.DuplicatePartialSide_DoesNotCountAsBothSides" methodname="DuplicatePartialSide_DoesNotCountAsBothSides" classname="PPEGlovePairStateTests" runstate="Runnable" seed="1900858593" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.000818" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output>[PPE Pair] CompleteSide Left Item=ChemicalGloves LeftEquipped=True RightEquipped=False PhysicalActive=False
+</output>
+        </test-case>
+        <test-suite type="ParameterizedMethod" id="1004" name="FirstSide_DoesNotCompleteLogicalEquipment" fullname="PPEGlovePairStateTests.FirstSide_DoesNotCompleteLogicalEquipment" classname="PPEGlovePairStateTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.004782" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-case id="1002" name="FirstSide_DoesNotCompleteLogicalEquipment(Left)" fullname="PPEGlovePairStateTests.FirstSide_DoesNotCompleteLogicalEquipment(Left)" methodname="FirstSide_DoesNotCompleteLogicalEquipment" classname="PPEGlovePairStateTests" runstate="Runnable" seed="468365739" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.003260" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+            <output>[PPE Pair] CompleteSide Left Item=ChemicalGloves LeftEquipped=True RightEquipped=False PhysicalActive=False
+</output>
+          </test-case>
+          <test-case id="1003" name="FirstSide_DoesNotCompleteLogicalEquipment(Right)" fullname="PPEGlovePairStateTests.FirstSide_DoesNotCompleteLogicalEquipment(Right)" methodname="FirstSide_DoesNotCompleteLogicalEquipment" classname="PPEGlovePairStateTests" runstate="Runnable" seed="1464631105" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.000764" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+            <output>[PPE Pair] CompleteSide Right Item=ChemicalGloves LeftEquipped=False RightEquipped=True PhysicalActive=False
+</output>
+          </test-case>
+        </test-suite>
+        <test-case id="1021" name="MemberFromAnotherPair_IsRejectedWithoutMutation" fullname="PPEGlovePairStateTests.MemberFromAnotherPair_IsRejectedWithoutMutation" methodname="MemberFromAnotherPair_IsRejectedWithoutMutation" classname="PPEGlovePairStateTests" runstate="Runnable" seed="181287095" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.000741" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-suite type="ParameterizedMethod" id="1014" name="MissingManager_RollsBackSecondSideForRetry" fullname="PPEGlovePairStateTests.MissingManager_RollsBackSecondSideForRetry" classname="PPEGlovePairStateTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.014476" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-case id="1010" name="MissingManager_RollsBackSecondSideForRetry(False,Left)" fullname="PPEGlovePairStateTests.MissingManager_RollsBackSecondSideForRetry(False,Left)" methodname="MissingManager_RollsBackSecondSideForRetry" classname="PPEGlovePairStateTests" runstate="Runnable" seed="2146959975" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.004077" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+            <output>[PPE Pair] CompleteSide Right Item=ChemicalGloves LeftEquipped=False RightEquipped=True PhysicalActive=False
+[PPE Pair] CompleteSide Left Item=ChemicalGloves LeftEquipped=True RightEquipped=True PhysicalActive=False
+[PPE Pair] Logical Equip failed; restored Left for retry. Item=ChemicalGloves
+[PPE Pair] CompleteSide Left Item=ChemicalGloves LeftEquipped=True RightEquipped=True PhysicalActive=False
+[PPE Equipped] Test gloves
+[PPE Sequence] Donning completed. Phase changed: Donning → EquipmentPreparation
+[PPE Sequence] Phase: EquipmentPreparation Step: 1/2 Required: ResponseBag
+</output>
+          </test-case>
+          <test-case id="1011" name="MissingManager_RollsBackSecondSideForRetry(False,Right)" fullname="PPEGlovePairStateTests.MissingManager_RollsBackSecondSideForRetry(False,Right)" methodname="MissingManager_RollsBackSecondSideForRetry" classname="PPEGlovePairStateTests" runstate="Runnable" seed="463172599" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.003226" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+            <output>[PPE Pair] CompleteSide Left Item=ChemicalGloves LeftEquipped=True RightEquipped=False PhysicalActive=False
+[PPE Pair] CompleteSide Right Item=ChemicalGloves LeftEquipped=True RightEquipped=True PhysicalActive=False
+[PPE Pair] Logical Equip failed; restored Right for retry. Item=ChemicalGloves
+[PPE Pair] CompleteSide Right Item=ChemicalGloves LeftEquipped=True RightEquipped=True PhysicalActive=False
+[PPE Equipped] Test gloves
+[PPE Sequence] Donning completed. Phase changed: Donning → EquipmentPreparation
+[PPE Sequence] Phase: EquipmentPreparation Step: 1/2 Required: ResponseBag
+</output>
+          </test-case>
+          <test-case id="1012" name="MissingManager_RollsBackSecondSideForRetry(True,Left)" fullname="PPEGlovePairStateTests.MissingManager_RollsBackSecondSideForRetry(True,Left)" methodname="MissingManager_RollsBackSecondSideForRetry" classname="PPEGlovePairStateTests" runstate="Runnable" seed="1266790884" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.003057" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+            <output>[PPE Pair] CompleteSide Right Item=ChemicalGloves LeftEquipped=False RightEquipped=True PhysicalActive=False
+[PPE Pair] Release side=Left Item=ChemicalGloves LeftEquipped=True RightEquipped=True
+[PPE Pair] Logical Equip failed; restored Left for retry. Item=ChemicalGloves
+[PPE Pair] CompleteSide Left Item=ChemicalGloves LeftEquipped=True RightEquipped=True PhysicalActive=False
+[PPE Equipped] Test gloves
+[PPE Sequence] Donning completed. Phase changed: Donning → EquipmentPreparation
+[PPE Sequence] Phase: EquipmentPreparation Step: 1/2 Required: ResponseBag
+</output>
+          </test-case>
+          <test-case id="1013" name="MissingManager_RollsBackSecondSideForRetry(True,Right)" fullname="PPEGlovePairStateTests.MissingManager_RollsBackSecondSideForRetry(True,Right)" methodname="MissingManager_RollsBackSecondSideForRetry" classname="PPEGlovePairStateTests" runstate="Runnable" seed="39273318" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.002906" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+            <output>[PPE Pair] CompleteSide Left Item=ChemicalGloves LeftEquipped=True RightEquipped=False PhysicalActive=False
+[PPE Pair] Release side=Right Item=ChemicalGloves LeftEquipped=True RightEquipped=True
+[PPE Pair] Logical Equip failed; restored Right for retry. Item=ChemicalGloves
+[PPE Pair] CompleteSide Right Item=ChemicalGloves LeftEquipped=True RightEquipped=True PhysicalActive=False
+[PPE Equipped] Test gloves
+[PPE Sequence] Donning completed. Phase changed: Donning → EquipmentPreparation
+[PPE Sequence] Phase: EquipmentPreparation Step: 1/2 Required: ResponseBag
+</output>
+          </test-case>
+        </test-suite>
+        <test-case id="1022" name="PairRelease_PropagatesRegistrationFailureToStoredState" fullname="PPEGlovePairStateTests.PairRelease_PropagatesRegistrationFailureToStoredState" methodname="PairRelease_PropagatesRegistrationFailureToStoredState" classname="PPEGlovePairStateTests" runstate="Runnable" seed="538354226" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.019990" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output>[PPE Pair] CompleteSide Left Item=ChemicalSafetyBoots LeftEquipped=True RightEquipped=False PhysicalActive=False
+[PPE ReleaseEquip]
+Item=RightBoot
+Target=RightLowerLeg
+TargetValid=True
+Distance=0.000
+Max=0.120
+Sequence=True
+Result=EQUIP_RIGHT
+[PPE Pair] Release side=Right Item=ChemicalSafetyBoots LeftEquipped=True RightEquipped=True
+[PPE Pair] Logical Equip failed; restored Right for retry. Item=ChemicalSafetyBoots
+</output>
+        </test-case>
+        <test-suite type="ParameterizedMethod" id="1019" name="RejectedLogicalEquip_RollsBackOnlySecondSideAndCanRetry" fullname="PPEGlovePairStateTests.RejectedLogicalEquip_RollsBackOnlySecondSideAndCanRetry" classname="PPEGlovePairStateTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.013857" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-case id="1015" name="RejectedLogicalEquip_RollsBackOnlySecondSideAndCanRetry(False,Left)" fullname="PPEGlovePairStateTests.RejectedLogicalEquip_RollsBackOnlySecondSideAndCanRetry(False,Left)" methodname="RejectedLogicalEquip_RollsBackOnlySecondSideAndCanRetry" classname="PPEGlovePairStateTests" runstate="Runnable" seed="644971974" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.003753" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+            <output>[PPE Pair] CompleteSide Right Item=ChemicalGloves LeftEquipped=False RightEquipped=True PhysicalActive=False
+[PPE Pair] CompleteSide Left Item=ChemicalGloves LeftEquipped=True RightEquipped=True PhysicalActive=False
+[PPE Pair] Logical Equip failed; restored Left for retry. Item=ChemicalGloves
+[PPE Pair] CompleteSide Left Item=ChemicalGloves LeftEquipped=True RightEquipped=True PhysicalActive=False
+[PPE Equipped] Test gloves
+[PPE Sequence] Donning completed. Phase changed: Donning → EquipmentPreparation
+[PPE Sequence] Phase: EquipmentPreparation Step: 1/2 Required: ResponseBag
+</output>
+          </test-case>
+          <test-case id="1016" name="RejectedLogicalEquip_RollsBackOnlySecondSideAndCanRetry(False,Right)" fullname="PPEGlovePairStateTests.RejectedLogicalEquip_RollsBackOnlySecondSideAndCanRetry(False,Right)" methodname="RejectedLogicalEquip_RollsBackOnlySecondSideAndCanRetry" classname="PPEGlovePairStateTests" runstate="Runnable" seed="2018132052" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.002983" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+            <output>[PPE Pair] CompleteSide Left Item=ChemicalGloves LeftEquipped=True RightEquipped=False PhysicalActive=False
+[PPE Pair] CompleteSide Right Item=ChemicalGloves LeftEquipped=True RightEquipped=True PhysicalActive=False
+[PPE Pair] Logical Equip failed; restored Right for retry. Item=ChemicalGloves
+[PPE Pair] CompleteSide Right Item=ChemicalGloves LeftEquipped=True RightEquipped=True PhysicalActive=False
+[PPE Equipped] Test gloves
+[PPE Sequence] Donning completed. Phase changed: Donning → EquipmentPreparation
+[PPE Sequence] Phase: EquipmentPreparation Step: 1/2 Required: ResponseBag
+</output>
+          </test-case>
+          <test-case id="1017" name="RejectedLogicalEquip_RollsBackOnlySecondSideAndCanRetry(True,Left)" fullname="PPEGlovePairStateTests.RejectedLogicalEquip_RollsBackOnlySecondSideAndCanRetry(True,Left)" methodname="RejectedLogicalEquip_RollsBackOnlySecondSideAndCanRetry" classname="PPEGlovePairStateTests" runstate="Runnable" seed="435700077" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.003011" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+            <output>[PPE Pair] CompleteSide Right Item=ChemicalGloves LeftEquipped=False RightEquipped=True PhysicalActive=False
+[PPE Pair] Release side=Left Item=ChemicalGloves LeftEquipped=True RightEquipped=True
+[PPE Pair] Logical Equip failed; restored Left for retry. Item=ChemicalGloves
+[PPE Pair] CompleteSide Left Item=ChemicalGloves LeftEquipped=True RightEquipped=True PhysicalActive=False
+[PPE Equipped] Test gloves
+[PPE Sequence] Donning completed. Phase changed: Donning → EquipmentPreparation
+[PPE Sequence] Phase: EquipmentPreparation Step: 1/2 Required: ResponseBag
+</output>
+          </test-case>
+          <test-case id="1018" name="RejectedLogicalEquip_RollsBackOnlySecondSideAndCanRetry(True,Right)" fullname="PPEGlovePairStateTests.RejectedLogicalEquip_RollsBackOnlySecondSideAndCanRetry(True,Right)" methodname="RejectedLogicalEquip_RollsBackOnlySecondSideAndCanRetry" classname="PPEGlovePairStateTests" runstate="Runnable" seed="1914598263" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.002783" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+            <output>[PPE Pair] CompleteSide Left Item=ChemicalGloves LeftEquipped=True RightEquipped=False PhysicalActive=False
+[PPE Pair] Release side=Right Item=ChemicalGloves LeftEquipped=True RightEquipped=True
+[PPE Pair] Logical Equip failed; restored Right for retry. Item=ChemicalGloves
+[PPE Pair] CompleteSide Right Item=ChemicalGloves LeftEquipped=True RightEquipped=True PhysicalActive=False
+[PPE Equipped] Test gloves
+[PPE Sequence] Donning completed. Phase changed: Donning → EquipmentPreparation
+[PPE Sequence] Phase: EquipmentPreparation Step: 1/2 Required: ResponseBag
+</output>
+          </test-case>
+        </test-suite>
+        <test-case id="1020" name="ResetAfterPartialCompletion_RestoresBothSidesAndAllowsNewAttempt" fullname="PPEGlovePairStateTests.ResetAfterPartialCompletion_RestoresBothSidesAndAllowsNewAttempt" methodname="ResetAfterPartialCompletion_RestoresBothSidesAndAllowsNewAttempt" classname="PPEGlovePairStateTests" runstate="Runnable" seed="939999594" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.001558" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output>[PPE Pair] CompleteSide Right Item=ChemicalGloves LeftEquipped=False RightEquipped=True PhysicalActive=False
+[PPE Pair] CompleteSide Right Item=ChemicalGloves LeftEquipped=False RightEquipped=True PhysicalActive=False
+</output>
+        </test-case>
+        <test-case id="1009" name="WrongSequence_PreservesBothPhysicalMembers" fullname="PPEGlovePairStateTests.WrongSequence_PreservesBothPhysicalMembers" methodname="WrongSequence_PreservesBothPhysicalMembers" classname="PPEGlovePairStateTests" runstate="Runnable" seed="283975976" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.000794" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output>[PPE Pair] CompleteSide blocked by sequence. Item=ChemicalGloves Required=InnerGloves
+</output>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1025" name="PPEPortfolioSequenceTests" fullname="PPEPortfolioSequenceTests" classname="PPEPortfolioSequenceTests" runstate="Runnable" testcasecount="13" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.027044" total="13" passed="13" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1036" name="ContentsInspection_AloneDoesNotSkipDonning_AndResetClearsIt" fullname="PPEPortfolioSequenceTests.ContentsInspection_AloneDoesNotSkipDonning_AndResetClearsIt" methodname="ContentsInspection_AloneDoesNotSkipDonning_AndResetClearsIt" classname="PPEPortfolioSequenceTests" runstate="Runnable" seed="1109628388" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.002140" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output>[PPE Sequence] Phase: Donning Step: 1/6 Required: InnerGloves
+[PPE Sequence] Response bag contents checked.
+[PPE Sequence] Phase: Donning Step: 1/6 Required: InnerGloves
+[PPE Sequence] Sequence reset.
+</output>
+        </test-case>
+        <test-case id="1026" name="DefaultOrder_SeparatesDonningFromPreparation_AndCompletesOnce" fullname="PPEPortfolioSequenceTests.DefaultOrder_SeparatesDonningFromPreparation_AndCompletesOnce" methodname="DefaultOrder_SeparatesDonningFromPreparation_AndCompletesOnce" classname="PPEPortfolioSequenceTests" runstate="Runnable" seed="63272566" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.007154" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output>[PPE Sequence] Phase: Donning Step: 1/6 Required: InnerGloves
+[PPE Sequence] Phase: Donning Step: 2/6 Required: ProtectiveSuit
+[PPE Sequence] Step complete: InnerGloves. Next: ProtectiveSuit
+[PPE Sequence] Phase: Donning Step: 3/6 Required: ChemicalBoots
+[PPE Sequence] Step complete: ProtectiveSuit. Next: ChemicalBoots
+[PPE Sequence] Phase: Donning Step: 4/6 Required: Respirator
+[PPE Sequence] Step complete: ChemicalBoots. Next: Respirator
+[PPE Sequence] Phase: Donning Step: 5/6 Required: FaceProtection
+[PPE Sequence] Step complete: Respirator. Next: FaceProtection
+[PPE Sequence] Phase: Donning Step: 6/6 Required: ProtectiveGloves
+[PPE Sequence] Step complete: FaceProtection. Next: ProtectiveGloves
+[PPE Sequence] Donning completed. Phase changed: Donning → EquipmentPreparation
+[PPE Sequence] Phase: EquipmentPreparation Step: 1/2 Required: ResponseBag
+[PPE Sequence] Response bag contents checked.
+[PPE Sequence] Phase: EquipmentPreparation Step: 2/2 Required: WasteContainer
+[PPE Sequence] Step complete: ResponseBag. Next: WasteContainer
+[PPE Sequence] EquipmentPreparation completed. Preparation sequence complete.
+</output>
+        </test-case>
+        <test-case id="1031" name="DuplicateCompletion_DoesNotSkipTheNextStep" fullname="PPEPortfolioSequenceTests.DuplicateCompletion_DoesNotSkipTheNextStep" methodname="DuplicateCompletion_DoesNotSkipTheNextStep" classname="PPEPortfolioSequenceTests" runstate="Runnable" seed="1137231416" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.001261" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output>[PPE Sequence] Phase: Donning Step: 1/6 Required: InnerGloves
+[PPE Sequence] Phase: Donning Step: 2/6 Required: ProtectiveSuit
+[PPE Sequence] Step complete: InnerGloves. Next: ProtectiveSuit
+</output>
+        </test-case>
+        <test-case id="1037" name="EquipmentManager_RejectsWrongOrder_ThenRegistersCorrectItemOnce" fullname="PPEPortfolioSequenceTests.EquipmentManager_RejectsWrongOrder_ThenRegistersCorrectItemOnce" methodname="EquipmentManager_RejectsWrongOrder_ThenRegistersCorrectItemOnce" classname="PPEPortfolioSequenceTests" runstate="Runnable" seed="425122744" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.003061" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output>[PPE Sequence] Phase: Donning Step: 1/6 Required: InnerGloves
+[PPE Sequence] Phase: Donning Step: 1/1 Required: ProtectiveSuit
+[PPE Sequence] Sequence reset.
+[PPE Equipped] ChemicalSuit
+[PPE Sequence] Donning completed. Phase changed: Donning → EquipmentPreparation
+[PPE Sequence] Phase: EquipmentPreparation Step: 1/2 Required: ResponseBag
+</output>
+        </test-case>
+        <test-suite type="ParameterizedMethod" id="1035" name="InvalidItemId_IsRejected" fullname="PPEPortfolioSequenceTests.InvalidItemId_IsRejected" classname="PPEPortfolioSequenceTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.002113" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-case id="1032" name="InvalidItemId_IsRejected(null)" fullname="PPEPortfolioSequenceTests.InvalidItemId_IsRejected(null)" methodname="InvalidItemId_IsRejected" classname="PPEPortfolioSequenceTests" runstate="Runnable" seed="1042055185" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.000646" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+            <output>[PPE Sequence] Phase: Donning Step: 1/6 Required: InnerGloves
+</output>
+          </test-case>
+          <test-case id="1033" name="InvalidItemId_IsRejected(&quot;&quot;)" fullname="PPEPortfolioSequenceTests.InvalidItemId_IsRejected(&quot;&quot;)" methodname="InvalidItemId_IsRejected" classname="PPEPortfolioSequenceTests" runstate="Runnable" seed="440739815" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.000480" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+            <output>[PPE Sequence] Phase: Donning Step: 1/6 Required: InnerGloves
+</output>
+          </test-case>
+          <test-case id="1034" name="InvalidItemId_IsRejected(&quot;UnknownEquipment&quot;)" fullname="PPEPortfolioSequenceTests.InvalidItemId_IsRejected(&quot;UnknownEquipment&quot;)" methodname="InvalidItemId_IsRejected" classname="PPEPortfolioSequenceTests" runstate="Runnable" seed="244651446" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.000391" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+            <output>[PPE Sequence] Phase: Donning Step: 1/6 Required: InnerGloves
+</output>
+          </test-case>
+        </test-suite>
+        <test-case id="1039" name="PreparationChange_IsIdempotent_AndNotReportedAsWearable" fullname="PPEPortfolioSequenceTests.PreparationChange_IsIdempotent_AndNotReportedAsWearable" methodname="PreparationChange_IsIdempotent_AndNotReportedAsWearable" classname="PPEPortfolioSequenceTests" runstate="Runnable" seed="1598213873" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.000741" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output>[PPE Sequence] Phase: Donning Step: 1/6 Required: InnerGloves
+</output>
+        </test-case>
+        <test-case id="1040" name="RecordedPartialLoadout_RemainsAuthoritative_WhenRoomManagersAreMissing" fullname="PPEPortfolioSequenceTests.RecordedPartialLoadout_RemainsAuthoritative_WhenRoomManagersAreMissing" methodname="RecordedPartialLoadout_RemainsAuthoritative_WhenRoomManagersAreMissing" classname="PPEPortfolioSequenceTests" runstate="Runnable" seed="143101358" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.001545" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output>[PPE Sequence] Phase: Donning Step: 1/6 Required: InnerGloves
+</output>
+        </test-case>
+        <test-case id="1038" name="RoomReset_ClearsItemManagerSequenceAndPreparationState" fullname="PPEPortfolioSequenceTests.RoomReset_ClearsItemManagerSequenceAndPreparationState" methodname="RoomReset_ClearsItemManagerSequenceAndPreparationState" classname="PPEPortfolioSequenceTests" runstate="Runnable" seed="1806455210" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.005095" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output>[PPE Sequence] Phase: Donning Step: 1/6 Required: InnerGloves
+[PPE Sequence] Phase: Donning Step: 1/1 Required: ProtectiveSuit
+[PPE Sequence] Sequence reset.
+[PPE Equipped] ChemicalSuit
+[PPE Sequence] Donning completed. Phase changed: Donning → EquipmentPreparation
+[PPE Sequence] Phase: EquipmentPreparation Step: 1/2 Required: ResponseBag
+[PPE Sequence] Response bag contents checked.
+[PPE Sequence] Phase: Donning Step: 1/1 Required: ProtectiveSuit
+[PPE Sequence] Sequence reset.
+[PPE Sequence] Full PPE Room training reset.
+</output>
+        </test-case>
+        <test-suite type="ParameterizedMethod" id="1030" name="WrongOrder_DoesNotAdvanceOrComplete" fullname="PPEPortfolioSequenceTests.WrongOrder_DoesNotAdvanceOrComplete" classname="PPEPortfolioSequenceTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.002391" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-case id="1027" name="WrongOrder_DoesNotAdvanceOrComplete(ProtectiveSuit)" fullname="PPEPortfolioSequenceTests.WrongOrder_DoesNotAdvanceOrComplete(ProtectiveSuit)" methodname="WrongOrder_DoesNotAdvanceOrComplete" classname="PPEPortfolioSequenceTests" runstate="Runnable" seed="1550210884" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.000653" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+            <output>[PPE Sequence] Phase: Donning Step: 1/6 Required: InnerGloves
+</output>
+          </test-case>
+          <test-case id="1028" name="WrongOrder_DoesNotAdvanceOrComplete(ResponseBag)" fullname="PPEPortfolioSequenceTests.WrongOrder_DoesNotAdvanceOrComplete(ResponseBag)" methodname="WrongOrder_DoesNotAdvanceOrComplete" classname="PPEPortfolioSequenceTests" runstate="Runnable" seed="1825572816" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.000633" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+            <output>[PPE Sequence] Phase: Donning Step: 1/6 Required: InnerGloves
+</output>
+          </test-case>
+          <test-case id="1029" name="WrongOrder_DoesNotAdvanceOrComplete(WasteContainer)" fullname="PPEPortfolioSequenceTests.WrongOrder_DoesNotAdvanceOrComplete(WasteContainer)" methodname="WrongOrder_DoesNotAdvanceOrComplete" classname="PPEPortfolioSequenceTests" runstate="Runnable" seed="1994615200" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.000506" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+            <output>[PPE Sequence] Phase: Donning Step: 1/6 Required: InnerGloves
+</output>
+          </test-case>
+        </test-suite>
+      </test-suite>
+      <test-suite type="TestFixture" id="1041" name="ResponseBagPackingTests" fullname="ResponseBagPackingTests" classname="ResponseBagPackingTests" runstate="Runnable" testcasecount="20" result="Failed" site="Child" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:16Z" duration="0.141662" total="20" passed="19" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message>One or more child tests had errors</message>
+        </failure>
+        <test-suite type="ParameterizedMethod" id="1045" name="AllPacked_RequiresEachOfTheThreeItems" fullname="ResponseBagPackingTests.AllPacked_RequiresEachOfTheThreeItems" classname="ResponseBagPackingTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.018762" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-case id="1042" name="AllPacked_RequiresEachOfTheThreeItems(0)" fullname="ResponseBagPackingTests.AllPacked_RequiresEachOfTheThreeItems(0)" methodname="AllPacked_RequiresEachOfTheThreeItems" classname="ResponseBagPackingTests" runstate="Runnable" seed="788253141" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.016027" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+            <output>[PPE Sequence] Phase: Donning Step: 1/6 Required: InnerGloves
+</output>
+          </test-case>
+          <test-case id="1043" name="AllPacked_RequiresEachOfTheThreeItems(1)" fullname="ResponseBagPackingTests.AllPacked_RequiresEachOfTheThreeItems(1)" methodname="AllPacked_RequiresEachOfTheThreeItems" classname="ResponseBagPackingTests" runstate="Runnable" seed="1330434373" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.001199" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+            <output>[PPE Sequence] Phase: Donning Step: 1/6 Required: InnerGloves
+</output>
+          </test-case>
+          <test-case id="1044" name="AllPacked_RequiresEachOfTheThreeItems(2)" fullname="ResponseBagPackingTests.AllPacked_RequiresEachOfTheThreeItems(2)" methodname="AllPacked_RequiresEachOfTheThreeItems" classname="ResponseBagPackingTests" runstate="Runnable" seed="969645175" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.001009" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+            <output>[PPE Sequence] Phase: Donning Step: 1/6 Required: InnerGloves
+</output>
+          </test-case>
+        </test-suite>
+        <test-suite type="ParameterizedMethod" id="1061" name="DisabledCallbackOrInteractable_RejectsFinalGrip" fullname="ResponseBagPackingTests.DisabledCallbackOrInteractable_RejectsFinalGrip" classname="ResponseBagPackingTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.012975" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-case id="1059" name="DisabledCallbackOrInteractable_RejectsFinalGrip(True)" fullname="ResponseBagPackingTests.DisabledCallbackOrInteractable_RejectsFinalGrip(True)" methodname="DisabledCallbackOrInteractable_RejectsFinalGrip" classname="ResponseBagPackingTests" runstate="Runnable" seed="993130147" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.007266" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+            <output>[PPE Sequence] Phase: Donning Step: 1/6 Required: InnerGloves
+[PPE Sequence] Phase: Donning Step: 2/6 Required: ProtectiveSuit
+[PPE Sequence] Step complete: InnerGloves. Next: ProtectiveSuit
+[PPE Sequence] Phase: Donning Step: 3/6 Required: ChemicalBoots
+[PPE Sequence] Step complete: ProtectiveSuit. Next: ChemicalBoots
+[PPE Sequence] Phase: Donning Step: 4/6 Required: Respirator
+[PPE Sequence] Step complete: ChemicalBoots. Next: Respirator
+[PPE Sequence] Phase: Donning Step: 5/6 Required: FaceProtection
+[PPE Sequence] Step complete: Respirator. Next: FaceProtection
+[PPE Sequence] Phase: Donning Step: 6/6 Required: ProtectiveGloves
+[PPE Sequence] Step complete: FaceProtection. Next: ProtectiveGloves
+[PPE Sequence] Donning completed. Phase changed: Donning → EquipmentPreparation
+[PPE Sequence] Phase: EquipmentPreparation Step: 1/2 Required: ResponseBag
+[PPE Sequence] Response bag contents checked.
+</output>
+          </test-case>
+          <test-case id="1060" name="DisabledCallbackOrInteractable_RejectsFinalGrip(False)" fullname="ResponseBagPackingTests.DisabledCallbackOrInteractable_RejectsFinalGrip(False)" methodname="DisabledCallbackOrInteractable_RejectsFinalGrip" classname="ResponseBagPackingTests" runstate="Runnable" seed="153872279" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.005201" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+            <output>[PPE Sequence] Phase: Donning Step: 1/6 Required: InnerGloves
+[PPE Sequence] Phase: Donning Step: 2/6 Required: ProtectiveSuit
+[PPE Sequence] Step complete: InnerGloves. Next: ProtectiveSuit
+[PPE Sequence] Phase: Donning Step: 3/6 Required: ChemicalBoots
+[PPE Sequence] Step complete: ProtectiveSuit. Next: ChemicalBoots
+[PPE Sequence] Phase: Donning Step: 4/6 Required: Respirator
+[PPE Sequence] Step complete: ChemicalBoots. Next: Respirator
+[PPE Sequence] Phase: Donning Step: 5/6 Required: FaceProtection
+[PPE Sequence] Step complete: Respirator. Next: FaceProtection
+[PPE Sequence] Phase: Donning Step: 6/6 Required: ProtectiveGloves
+[PPE Sequence] Step complete: FaceProtection. Next: ProtectiveGloves
+[PPE Sequence] Donning completed. Phase changed: Donning → EquipmentPreparation
+[PPE Sequence] Phase: EquipmentPreparation Step: 1/2 Required: ResponseBag
+[PPE Sequence] Response bag contents checked.
+</output>
+          </test-case>
+        </test-suite>
+        <test-case id="1058" name="ExplicitXriSelect_ConfirmsFullyPackedBag" fullname="ResponseBagPackingTests.ExplicitXriSelect_ConfirmsFullyPackedBag" methodname="ExplicitXriSelect_ConfirmsFullyPackedBag" classname="ResponseBagPackingTests" runstate="Runnable" seed="935489526" result="Failed" label="Error" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.013339" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <failure>
+            <message>System.NullReferenceException : Object reference not set to an instance of an object</message>
+            <stack-trace>  at Unity.XR.CoreUtils.TransformExtensions.SetLocalPose (UnityEngine.Transform transform, UnityEngine.Pose pose) [0x00000] in .\Library\PackageCache\com.unity.xr.core-utils@a8b900321199\Runtime\Extensions\TransformExtensions.cs:49 
+  at UnityEngine.XR.Interaction.Toolkit.Interactors.XRRayInteractor.RestoreAttachTransform () [0x0000d] in .\Library\PackageCache\com.unity.xr.interaction.toolkit@4612b35e2aac\Runtime\Interaction\Interactors\XRRayInteractor.cs:2869 
+  at UnityEngine.XR.Interaction.Toolkit.Interactors.XRRayInteractor.OnSelectExiting (UnityEngine.XR.Interaction.Toolkit.SelectExitEventArgs args) [0x00028] in .\Library\PackageCache\com.unity.xr.interaction.toolkit@4612b35e2aac\Runtime\Interaction\Interactors\XRRayInteractor.cs:2804 
+  at UnityEngine.XR.Interaction.Toolkit.Interactors.XRBaseInteractor.UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor.OnSelectExiting (UnityEngine.XR.Interaction.Toolkit.SelectExitEventArgs args) [0x00000] in .\Library\PackageCache\com.unity.xr.interaction.toolkit@4612b35e2aac\Runtime\Interaction\Interactors\XRBaseInteractor.cs:787 
+  at UnityEngine.XR.Interaction.Toolkit.XRInteractionManager.SelectExit (UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor interactor, UnityEngine.XR.Interaction.Toolkit.Interactables.IXRSelectInteractable interactable, UnityEngine.XR.Interaction.Toolkit.SelectExitEventArgs args) [0x00056] in .\Library\PackageCache\com.unity.xr.interaction.toolkit@4612b35e2aac\Runtime\Interaction\XRInteractionManager.cs:2554 
+  at UnityEngine.XR.Interaction.Toolkit.XRInteractionManager.SelectCancel (UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor interactor, UnityEngine.XR.Interaction.Toolkit.Interactables.IXRSelectInteractable interactable) [0x00032] in .\Library\PackageCache\com.unity.xr.interaction.toolkit@4612b35e2aac\Runtime\Interaction\XRInteractionManager.cs:2338 
+  at UnityEngine.XR.Interaction.Toolkit.XRInteractionManager.CancelInteractableSelection (UnityEngine.XR.Interaction.Toolkit.Interactables.IXRSelectInteractable interactable) [0x00010] in .\Library\PackageCache\com.unity.xr.interaction.toolkit@4612b35e2aac\Runtime\Interaction\XRInteractionManager.cs:2079 
+  at ResponseEquipmentManager.ClearXrInteraction (UnityEngine.GameObject bagRoot) [0x00059] in &lt;VALIDATION_PROJECT&gt;\Assets\1.JSR\Scripts\ResponseEquipmentManager.cs:1103 
+  at ResponseEquipmentManager.PrepareResponseBag (UnityEngine.GameObject bagRoot, System.Boolean deactivateRoot) [0x0007f] in &lt;VALIDATION_PROJECT&gt;\Assets\1.JSR\Scripts\ResponseEquipmentManager.cs:663 
+  at ResponseEquipmentManager.PrepareResponseBag (UnityEngine.GameObject bagRoot) [0x00000] in &lt;VALIDATION_PROJECT&gt;\Assets\1.JSR\Scripts\ResponseEquipmentManager.cs:637 
+  at ResponseEquipmentManager.TryCompleteResponseBagPreparation () [0x00042] in &lt;VALIDATION_PROJECT&gt;\Assets\1.JSR\Scripts\ResponseEquipmentManager.cs:711 
+  at ResponseBagPrepareInteractable.BeginPreparation () [0x00029] in &lt;VALIDATION_PROJECT&gt;\Assets\1.JSR\Scripts\ResponseBagPrepareInteractable.cs:326 
+  at ResponseBagPrepareInteractable.OnSelectEntered (UnityEngine.XR.Interaction.Toolkit.SelectEnterEventArgs args) [0x00054] in &lt;VALIDATION_PROJECT&gt;\Assets\1.JSR\Scripts\ResponseBagPrepareInteractable.cs:129 
+  at UnityEngine.Events.InvokableCall`1[T1].Invoke (T1 args0) [0x0000d] in &lt;0ed212dbc30045708ade919c1a8365d7&gt;:0 
+  at UnityEngine.Events.UnityEvent`1[T0].Invoke (T0 arg0) [0x0001b] in &lt;0ed212dbc30045708ade919c1a8365d7&gt;:0 
+  at UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable.OnSelectEntered (UnityEngine.XR.Interaction.Toolkit.SelectEnterEventArgs args) [0x00020] in .\Library\PackageCache\com.unity.xr.interaction.toolkit@4612b35e2aac\Runtime\Interaction\Interactables\XRBaseInteractable.cs:1314 
+  at UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable.UnityEngine.XR.Interaction.Toolkit.Interactables.IXRSelectInteractable.OnSelectEntered (UnityEngine.XR.Interaction.Toolkit.SelectEnterEventArgs args) [0x00000] in .\Library\PackageCache\com.unity.xr.interaction.toolkit@4612b35e2aac\Runtime\Interaction\Interactables\XRBaseInteractable.cs:1111 
+  at UnityEngine.XR.Interaction.Toolkit.XRInteractionManager.SelectEnter (UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor interactor, UnityEngine.XR.Interaction.Toolkit.Interactables.IXRSelectInteractable interactable, UnityEngine.XR.Interaction.Toolkit.SelectEnterEventArgs args) [0x0006b] in .\Library\PackageCache\com.unity.xr.interaction.toolkit@4612b35e2aac\Runtime\Interaction\XRInteractionManager.cs:2529 
+  at UnityEngine.XR.Interaction.Toolkit.XRInteractionManager.SelectEnterUnconditionally (UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor interactor, UnityEngine.XR.Interaction.Toolkit.Interactables.IXRSelectInteractable interactable) [0x0003e] in .\Library\PackageCache\com.unity.xr.interaction.toolkit@4612b35e2aac\Runtime\Interaction\XRInteractionManager.cs:2292 
+  at UnityEngine.XR.Interaction.Toolkit.XRInteractionManager.SelectEnter (UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor interactor, UnityEngine.XR.Interaction.Toolkit.Interactables.IXRSelectInteractable interactable) [0x0003e] in .\Library\PackageCache\com.unity.xr.interaction.toolkit@4612b35e2aac\Runtime\Interaction\XRInteractionManager.cs:2264 
+  at ResponseBagPackingTests.ExplicitXriSelect_ConfirmsFullyPackedBag () [0x00006] in &lt;VALIDATION_PROJECT&gt;\Assets\1.JSR\Editor\ResponseBagPackingTests.cs:301 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&amp;)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in &lt;f713e1c3c5f545ce9b1df47230f4f853&gt;:0 </stack-trace>
+          </failure>
+          <output>[PPE Sequence] Phase: Donning Step: 1/6 Required: InnerGloves
+[PPE Sequence] Phase: Donning Step: 2/6 Required: ProtectiveSuit
+[PPE Sequence] Step complete: InnerGloves. Next: ProtectiveSuit
+[PPE Sequence] Phase: Donning Step: 3/6 Required: ChemicalBoots
+[PPE Sequence] Step complete: ProtectiveSuit. Next: ChemicalBoots
+[PPE Sequence] Phase: Donning Step: 4/6 Required: Respirator
+[PPE Sequence] Step complete: ChemicalBoots. Next: Respirator
+[PPE Sequence] Phase: Donning Step: 5/6 Required: FaceProtection
+[PPE Sequence] Step complete: Respirator. Next: FaceProtection
+[PPE Sequence] Phase: Donning Step: 6/6 Required: ProtectiveGloves
+[PPE Sequence] Step complete: FaceProtection. Next: ProtectiveGloves
+[PPE Sequence] Donning completed. Phase changed: Donning → EquipmentPreparation
+[PPE Sequence] Phase: EquipmentPreparation Step: 1/2 Required: ResponseBag
+[PPE Sequence] Response bag contents checked.
+</output>
+        </test-case>
+        <test-case id="1057" name="LegacyActivate_RequiresTheEventInteractorToTargetTheBag" fullname="ResponseBagPackingTests.LegacyActivate_RequiresTheEventInteractorToTargetTheBag" methodname="LegacyActivate_RequiresTheEventInteractorToTargetTheBag" classname="ResponseBagPackingTests" runstate="Runnable" seed="630727432" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.009783" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output>[PPE Sequence] Phase: Donning Step: 1/6 Required: InnerGloves
+[PPE Sequence] Phase: Donning Step: 2/6 Required: ProtectiveSuit
+[PPE Sequence] Step complete: InnerGloves. Next: ProtectiveSuit
+[PPE Sequence] Phase: Donning Step: 3/6 Required: ChemicalBoots
+[PPE Sequence] Step complete: ProtectiveSuit. Next: ChemicalBoots
+[PPE Sequence] Phase: Donning Step: 4/6 Required: Respirator
+[PPE Sequence] Step complete: ChemicalBoots. Next: Respirator
+[PPE Sequence] Phase: Donning Step: 5/6 Required: FaceProtection
+[PPE Sequence] Step complete: Respirator. Next: FaceProtection
+[PPE Sequence] Phase: Donning Step: 6/6 Required: ProtectiveGloves
+[PPE Sequence] Step complete: FaceProtection. Next: ProtectiveGloves
+[PPE Sequence] Donning completed. Phase changed: Donning → EquipmentPreparation
+[PPE Sequence] Phase: EquipmentPreparation Step: 1/2 Required: ResponseBag
+[PPE Sequence] Response bag contents checked.
+[Response Equipment] PPEEquipFeedbackUI missing — prepared message skipped.
+[PPE Sequence] Phase: EquipmentPreparation Step: 2/2 Required: WasteContainer
+[PPE Sequence] Step complete: ResponseBag. Next: WasteContainer
+[Response Equipment] Response bag prepared.
+</output>
+        </test-case>
+        <test-case id="1063" name="LegacyNoArgumentApi_StillRequiresLiveTarget" fullname="ResponseBagPackingTests.LegacyNoArgumentApi_StillRequiresLiveTarget" methodname="LegacyNoArgumentApi_StillRequiresLiveTarget" classname="ResponseBagPackingTests" runstate="Runnable" seed="1508564616" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.006469" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output>[PPE Sequence] Phase: Donning Step: 1/6 Required: InnerGloves
+[PPE Sequence] Phase: Donning Step: 2/6 Required: ProtectiveSuit
+[PPE Sequence] Step complete: InnerGloves. Next: ProtectiveSuit
+[PPE Sequence] Phase: Donning Step: 3/6 Required: ChemicalBoots
+[PPE Sequence] Step complete: ProtectiveSuit. Next: ChemicalBoots
+[PPE Sequence] Phase: Donning Step: 4/6 Required: Respirator
+[PPE Sequence] Step complete: ChemicalBoots. Next: Respirator
+[PPE Sequence] Phase: Donning Step: 5/6 Required: FaceProtection
+[PPE Sequence] Step complete: Respirator. Next: FaceProtection
+[PPE Sequence] Phase: Donning Step: 6/6 Required: ProtectiveGloves
+[PPE Sequence] Step complete: FaceProtection. Next: ProtectiveGloves
+[PPE Sequence] Donning completed. Phase changed: Donning → EquipmentPreparation
+[PPE Sequence] Phase: EquipmentPreparation Step: 1/2 Required: ResponseBag
+[PPE Sequence] Response bag contents checked.
+[Response Equipment] PPEEquipFeedbackUI missing — prepared message skipped.
+[PPE Sequence] Phase: EquipmentPreparation Step: 2/2 Required: WasteContainer
+[PPE Sequence] Step complete: ResponseBag. Next: WasteContainer
+[Response Equipment] Response bag prepared.
+</output>
+        </test-case>
+        <test-case id="1055" name="LegacyWearableFallback_CannotEquipStickyPackedBagElsewhere" fullname="ResponseBagPackingTests.LegacyWearableFallback_CannotEquipStickyPackedBagElsewhere" methodname="LegacyWearableFallback_CannotEquipStickyPackedBagElsewhere" classname="ResponseBagPackingTests" runstate="Runnable" seed="1564764810" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.007821" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output>[PPE Sequence] Phase: Donning Step: 1/6 Required: InnerGloves
+[PPE Sequence] Phase: Donning Step: 2/6 Required: ProtectiveSuit
+[PPE Sequence] Step complete: InnerGloves. Next: ProtectiveSuit
+[PPE Sequence] Phase: Donning Step: 3/6 Required: ChemicalBoots
+[PPE Sequence] Step complete: ProtectiveSuit. Next: ChemicalBoots
+[PPE Sequence] Phase: Donning Step: 4/6 Required: Respirator
+[PPE Sequence] Step complete: ChemicalBoots. Next: Respirator
+[PPE Sequence] Phase: Donning Step: 5/6 Required: FaceProtection
+[PPE Sequence] Step complete: Respirator. Next: FaceProtection
+[PPE Sequence] Phase: Donning Step: 6/6 Required: ProtectiveGloves
+[PPE Sequence] Step complete: FaceProtection. Next: ProtectiveGloves
+[PPE Sequence] Donning completed. Phase changed: Donning → EquipmentPreparation
+[PPE Sequence] Phase: EquipmentPreparation Step: 1/2 Required: ResponseBag
+[PPE Sequence] Response bag contents checked.
+</output>
+        </test-case>
+        <test-case id="1056" name="LegacyWearableFallback_StillEquipsAnAllowedNonBagItem" fullname="ResponseBagPackingTests.LegacyWearableFallback_StillEquipsAnAllowedNonBagItem" methodname="LegacyWearableFallback_StillEquipsAnAllowedNonBagItem" classname="ResponseBagPackingTests" runstate="Runnable" seed="667359639" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.014838" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output>[PPE Sequence] Phase: Donning Step: 1/6 Required: InnerGloves
+[PPE Equipped] Test suit
+[PPE Sequence] Donning completed. Phase changed: Donning → EquipmentPreparation
+[PPE Sequence] Phase: EquipmentPreparation Step: 1/2 Required: ResponseBag
+</output>
+        </test-case>
+        <test-case id="1052" name="PackingGrip_DuringDonning_DoesNotSkipSequence" fullname="ResponseBagPackingTests.PackingGrip_DuringDonning_DoesNotSkipSequence" methodname="PackingGrip_DuringDonning_DoesNotSkipSequence" classname="ResponseBagPackingTests" runstate="Runnable" seed="389494576" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.001685" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output>[PPE Sequence] Phase: Donning Step: 1/6 Required: InnerGloves
+[PPE Sequence] Response bag contents checked.
+</output>
+        </test-case>
+        <test-case id="1051" name="PackingGrip_WithMissingItem_DoesNotPrepare" fullname="ResponseBagPackingTests.PackingGrip_WithMissingItem_DoesNotPrepare" methodname="PackingGrip_WithMissingItem_DoesNotPrepare" classname="ResponseBagPackingTests" runstate="Runnable" seed="1873248480" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.004116" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output>[PPE Sequence] Phase: Donning Step: 1/6 Required: InnerGloves
+[PPE Sequence] Phase: Donning Step: 2/6 Required: ProtectiveSuit
+[PPE Sequence] Step complete: InnerGloves. Next: ProtectiveSuit
+[PPE Sequence] Phase: Donning Step: 3/6 Required: ChemicalBoots
+[PPE Sequence] Step complete: ProtectiveSuit. Next: ChemicalBoots
+[PPE Sequence] Phase: Donning Step: 4/6 Required: Respirator
+[PPE Sequence] Step complete: ChemicalBoots. Next: Respirator
+[PPE Sequence] Phase: Donning Step: 5/6 Required: FaceProtection
+[PPE Sequence] Step complete: Respirator. Next: FaceProtection
+[PPE Sequence] Phase: Donning Step: 6/6 Required: ProtectiveGloves
+[PPE Sequence] Step complete: FaceProtection. Next: ProtectiveGloves
+[PPE Sequence] Donning completed. Phase changed: Donning → EquipmentPreparation
+[PPE Sequence] Phase: EquipmentPreparation Step: 1/2 Required: ResponseBag
+</output>
+        </test-case>
+        <test-case id="1046" name="ReleaseInsideBag_StoresEachItemOnce_AndWaitsForFinalGrip" fullname="ResponseBagPackingTests.ReleaseInsideBag_StoresEachItemOnce_AndWaitsForFinalGrip" methodname="ReleaseInsideBag_StoresEachItemOnce_AndWaitsForFinalGrip" classname="ResponseBagPackingTests" runstate="Runnable" seed="2099391201" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.004835" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output>[PPE Sequence] Phase: Donning Step: 1/6 Required: InnerGloves
+[PPE Sequence] Phase: Donning Step: 2/6 Required: ProtectiveSuit
+[PPE Sequence] Step complete: InnerGloves. Next: ProtectiveSuit
+[PPE Sequence] Phase: Donning Step: 3/6 Required: ChemicalBoots
+[PPE Sequence] Step complete: ProtectiveSuit. Next: ChemicalBoots
+[PPE Sequence] Phase: Donning Step: 4/6 Required: Respirator
+[PPE Sequence] Step complete: ChemicalBoots. Next: Respirator
+[PPE Sequence] Phase: Donning Step: 5/6 Required: FaceProtection
+[PPE Sequence] Step complete: Respirator. Next: FaceProtection
+[PPE Sequence] Phase: Donning Step: 6/6 Required: ProtectiveGloves
+[PPE Sequence] Step complete: FaceProtection. Next: ProtectiveGloves
+[PPE Sequence] Donning completed. Phase changed: Donning → EquipmentPreparation
+[PPE Sequence] Phase: EquipmentPreparation Step: 1/2 Required: ResponseBag
+[PPE Sequence] Response bag contents checked.
+</output>
+        </test-case>
+        <test-case id="1062" name="ResetResponseBag_ClearsPreparedContentsAndStaleTriggerContacts" fullname="ResponseBagPackingTests.ResetResponseBag_ClearsPreparedContentsAndStaleTriggerContacts" methodname="ResetResponseBag_ClearsPreparedContentsAndStaleTriggerContacts" classname="ResponseBagPackingTests" runstate="Runnable" seed="1198215" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:15Z" duration="0.007326" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output>[PPE Sequence] Phase: Donning Step: 1/6 Required: InnerGloves
+[PPE Sequence] Phase: Donning Step: 2/6 Required: ProtectiveSuit
+[PPE Sequence] Step complete: InnerGloves. Next: ProtectiveSuit
+[PPE Sequence] Phase: Donning Step: 3/6 Required: ChemicalBoots
+[PPE Sequence] Step complete: ProtectiveSuit. Next: ChemicalBoots
+[PPE Sequence] Phase: Donning Step: 4/6 Required: Respirator
+[PPE Sequence] Step complete: ChemicalBoots. Next: Respirator
+[PPE Sequence] Phase: Donning Step: 5/6 Required: FaceProtection
+[PPE Sequence] Step complete: Respirator. Next: FaceProtection
+[PPE Sequence] Phase: Donning Step: 6/6 Required: ProtectiveGloves
+[PPE Sequence] Step complete: FaceProtection. Next: ProtectiveGloves
+[PPE Sequence] Donning completed. Phase changed: Donning → EquipmentPreparation
+[PPE Sequence] Phase: EquipmentPreparation Step: 1/2 Required: ResponseBag
+[PPE Sequence] Response bag contents checked.
+[Response Equipment] PPEEquipFeedbackUI missing — prepared message skipped.
+[PPE Sequence] Phase: EquipmentPreparation Step: 2/2 Required: WasteContainer
+[PPE Sequence] Step complete: ResponseBag. Next: WasteContainer
+[Response Equipment] Response bag prepared.
+[Response Equipment] ResetResponseBag()
+</output>
+        </test-case>
+        <test-case id="1049" name="SharedSelect_FromHoveringHand_PreparesExactlyOnce" fullname="ResponseBagPackingTests.SharedSelect_FromHoveringHand_PreparesExactlyOnce" methodname="SharedSelect_FromHoveringHand_PreparesExactlyOnce" classname="ResponseBagPackingTests" runstate="Runnable" seed="2080060195" result="Passed" start-time="2026-10-27 04:38:15Z" end-time="2026-10-27 04:38:16Z" duration="0.007685" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output>[PPE Sequence] Phase: Donning Step: 1/6 Required: InnerGloves
+[PPE Sequence] Phase: Donning Step: 2/6 Required: ProtectiveSuit
+[PPE Sequence] Step complete: InnerGloves. Next: ProtectiveSuit
+[PPE Sequence] Phase: Donning Step: 3/6 Required: ChemicalBoots
+[PPE Sequence] Step complete: ProtectiveSuit. Next: ChemicalBoots
+[PPE Sequence] Phase: Donning Step: 4/6 Required: Respirator
+[PPE Sequence] Step complete: ChemicalBoots. Next: Respirator
+[PPE Sequence] Phase: Donning Step: 5/6 Required: FaceProtection
+[PPE Sequence] Step complete: Respirator. Next: FaceProtection
+[PPE Sequence] Phase: Donning Step: 6/6 Required: ProtectiveGloves
+[PPE Sequence] Step complete: FaceProtection. Next: ProtectiveGloves
+[PPE Sequence] Donning completed. Phase changed: Donning → EquipmentPreparation
+[PPE Sequence] Phase: EquipmentPreparation Step: 1/2 Required: ResponseBag
+[PPE Sequence] Response bag contents checked.
+[Response Equipment] PPEEquipFeedbackUI missing — prepared message skipped.
+[PPE Sequence] Phase: EquipmentPreparation Step: 2/2 Required: WasteContainer
+[PPE Sequence] Step complete: ResponseBag. Next: WasteContainer
+[Response Equipment] Response bag prepared.
+[PPE Packing] Final Grip confirmed — response bag collected.
+</output>
+        </test-case>
+        <test-case id="1048" name="SharedSelect_FromOtherHand_DoesNotPrepare" fullname="ResponseBagPackingTests.SharedSelect_FromOtherHand_DoesNotPrepare" methodname="SharedSelect_FromOtherHand_DoesNotPrepare" classname="ResponseBagPackingTests" runstate="Runnable" seed="995927205" result="Passed" start-time="2026-10-27 04:38:16Z" end-time="2026-10-27 04:38:16Z" duration="0.005304" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output>[PPE Sequence] Phase: Donning Step: 1/6 Required: InnerGloves
+[PPE Sequence] Phase: Donning Step: 2/6 Required: ProtectiveSuit
+[PPE Sequence] Step complete: InnerGloves. Next: ProtectiveSuit
+[PPE Sequence] Phase: Donning Step: 3/6 Required: ChemicalBoots
+[PPE Sequence] Step complete: ProtectiveSuit. Next: ChemicalBoots
+[PPE Sequence] Phase: Donning Step: 4/6 Required: Respirator
+[PPE Sequence] Step complete: ChemicalBoots. Next: Respirator
+[PPE Sequence] Phase: Donning Step: 5/6 Required: FaceProtection
+[PPE Sequence] Step complete: Respirator. Next: FaceProtection
+[PPE Sequence] Phase: Donning Step: 6/6 Required: ProtectiveGloves
+[PPE Sequence] Step complete: FaceProtection. Next: ProtectiveGloves
+[PPE Sequence] Donning completed. Phase changed: Donning → EquipmentPreparation
+[PPE Sequence] Phase: EquipmentPreparation Step: 1/2 Required: ResponseBag
+[PPE Sequence] Response bag contents checked.
+</output>
+        </test-case>
+        <test-case id="1047" name="SharedSelect_WithoutLiveBagTarget_DoesNotPrepare" fullname="ResponseBagPackingTests.SharedSelect_WithoutLiveBagTarget_DoesNotPrepare" methodname="SharedSelect_WithoutLiveBagTarget_DoesNotPrepare" classname="ResponseBagPackingTests" runstate="Runnable" seed="1513299833" result="Passed" start-time="2026-10-27 04:38:16Z" end-time="2026-10-27 04:38:16Z" duration="0.005973" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output>[PPE Sequence] Phase: Donning Step: 1/6 Required: InnerGloves
+[PPE Sequence] Phase: Donning Step: 2/6 Required: ProtectiveSuit
+[PPE Sequence] Step complete: InnerGloves. Next: ProtectiveSuit
+[PPE Sequence] Phase: Donning Step: 3/6 Required: ChemicalBoots
+[PPE Sequence] Step complete: ProtectiveSuit. Next: ChemicalBoots
+[PPE Sequence] Phase: Donning Step: 4/6 Required: Respirator
+[PPE Sequence] Step complete: ChemicalBoots. Next: Respirator
+[PPE Sequence] Phase: Donning Step: 5/6 Required: FaceProtection
+[PPE Sequence] Step complete: Respirator. Next: FaceProtection
+[PPE Sequence] Phase: Donning Step: 6/6 Required: ProtectiveGloves
+[PPE Sequence] Step complete: FaceProtection. Next: ProtectiveGloves
+[PPE Sequence] Donning completed. Phase changed: Donning → EquipmentPreparation
+[PPE Sequence] Phase: EquipmentPreparation Step: 1/2 Required: ResponseBag
+[PPE Sequence] Response bag contents checked.
+</output>
+        </test-case>
+        <test-case id="1050" name="SharedTrigger_WhileHovering_DoesNotPrepare" fullname="ResponseBagPackingTests.SharedTrigger_WhileHovering_DoesNotPrepare" methodname="SharedTrigger_WhileHovering_DoesNotPrepare" classname="ResponseBagPackingTests" runstate="Runnable" seed="2074885693" result="Passed" start-time="2026-10-27 04:38:16Z" end-time="2026-10-27 04:38:16Z" duration="0.005622" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output>[PPE Sequence] Phase: Donning Step: 1/6 Required: InnerGloves
+[PPE Sequence] Phase: Donning Step: 2/6 Required: ProtectiveSuit
+[PPE Sequence] Step complete: InnerGloves. Next: ProtectiveSuit
+[PPE Sequence] Phase: Donning Step: 3/6 Required: ChemicalBoots
+[PPE Sequence] Step complete: ProtectiveSuit. Next: ChemicalBoots
+[PPE Sequence] Phase: Donning Step: 4/6 Required: Respirator
+[PPE Sequence] Step complete: ChemicalBoots. Next: Respirator
+[PPE Sequence] Phase: Donning Step: 5/6 Required: FaceProtection
+[PPE Sequence] Step complete: Respirator. Next: FaceProtection
+[PPE Sequence] Phase: Donning Step: 6/6 Required: ProtectiveGloves
+[PPE Sequence] Step complete: FaceProtection. Next: ProtectiveGloves
+[PPE Sequence] Donning completed. Phase changed: Donning → EquipmentPreparation
+[PPE Sequence] Phase: EquipmentPreparation Step: 1/2 Required: ResponseBag
+[PPE Sequence] Response bag contents checked.
+</output>
+        </test-case>
+        <test-case id="1054" name="StandaloneRouter_OtherHandCannotUseStickySelectionBypass" fullname="ResponseBagPackingTests.StandaloneRouter_OtherHandCannotUseStickySelectionBypass" methodname="StandaloneRouter_OtherHandCannotUseStickySelectionBypass" classname="ResponseBagPackingTests" runstate="Runnable" seed="542331229" result="Passed" start-time="2026-10-27 04:38:16Z" end-time="2026-10-27 04:38:16Z" duration="0.006603" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output>[PPE Sequence] Phase: Donning Step: 1/6 Required: InnerGloves
+[PPE Sequence] Phase: Donning Step: 2/6 Required: ProtectiveSuit
+[PPE Sequence] Step complete: InnerGloves. Next: ProtectiveSuit
+[PPE Sequence] Phase: Donning Step: 3/6 Required: ChemicalBoots
+[PPE Sequence] Step complete: ProtectiveSuit. Next: ChemicalBoots
+[PPE Sequence] Phase: Donning Step: 4/6 Required: Respirator
+[PPE Sequence] Step complete: ChemicalBoots. Next: Respirator
+[PPE Sequence] Phase: Donning Step: 5/6 Required: FaceProtection
+[PPE Sequence] Step complete: Respirator. Next: FaceProtection
+[PPE Sequence] Phase: Donning Step: 6/6 Required: ProtectiveGloves
+[PPE Sequence] Step complete: FaceProtection. Next: ProtectiveGloves
+[PPE Sequence] Donning completed. Phase changed: Donning → EquipmentPreparation
+[PPE Sequence] Phase: EquipmentPreparation Step: 1/2 Required: ResponseBag
+[PPE Sequence] Response bag contents checked.
+[Response Equipment] PPEEquipFeedbackUI missing — prepared message skipped.
+[PPE Sequence] Phase: EquipmentPreparation Step: 2/2 Required: WasteContainer
+[PPE Sequence] Step complete: ResponseBag. Next: WasteContainer
+[Response Equipment] Response bag prepared.
+</output>
+        </test-case>
+        <test-case id="1053" name="StickySelection_AfterHoverExit_DoesNotPrepare" fullname="ResponseBagPackingTests.StickySelection_AfterHoverExit_DoesNotPrepare" methodname="StickySelection_AfterHoverExit_DoesNotPrepare" classname="ResponseBagPackingTests" runstate="Runnable" seed="2006524054" result="Passed" start-time="2026-10-27 04:38:16Z" end-time="2026-10-27 04:38:16Z" duration="0.005374" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output>[PPE Sequence] Phase: Donning Step: 1/6 Required: InnerGloves
+[PPE Sequence] Phase: Donning Step: 2/6 Required: ProtectiveSuit
+[PPE Sequence] Step complete: InnerGloves. Next: ProtectiveSuit
+[PPE Sequence] Phase: Donning Step: 3/6 Required: ChemicalBoots
+[PPE Sequence] Step complete: ProtectiveSuit. Next: ChemicalBoots
+[PPE Sequence] Phase: Donning Step: 4/6 Required: Respirator
+[PPE Sequence] Step complete: ChemicalBoots. Next: Respirator
+[PPE Sequence] Phase: Donning Step: 5/6 Required: FaceProtection
+[PPE Sequence] Step complete: Respirator. Next: FaceProtection
+[PPE Sequence] Phase: Donning Step: 6/6 Required: ProtectiveGloves
+[PPE Sequence] Step complete: FaceProtection. Next: ProtectiveGloves
+[PPE Sequence] Donning completed. Phase changed: Donning → EquipmentPreparation
+[PPE Sequence] Phase: EquipmentPreparation Step: 1/2 Required: ResponseBag
+[PPE Sequence] Response bag contents checked.
+Saving results to: &lt;USER_HOME&gt;/AppData/LocalLow/DefaultCompany/VR Test\TestResults.xml
+</output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

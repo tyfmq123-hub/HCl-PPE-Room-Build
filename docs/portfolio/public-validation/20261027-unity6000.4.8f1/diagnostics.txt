@@ -1,0 +1,98 @@
+ACTUAL UNITY 6000.4.8f1 VALIDATION
+Import/compilation: return0, C# errors0
+First new50 run:49pass1fixture error
+Focused rerun:50pass0fail
+First fullsuite:216pass2fail
+Final fullsuite:217pass1existingTint failure, allnew50pass
+Discovery new50 names match final executed50 exactly; runnable50, skipped0, undiscovered0
+PPE scene:524GameObjects1048Components, missingScript0 brokenReference0
+Remaining Color max channel delta: 8.940696716308594e-08
+
+new-50-results.xml
+ResponseBagPackingTests.ExplicitXriSelect_ConfirmsFullyPackedBag
+System.NullReferenceException : Object reference not set to an instance of an object
+  at Unity.XR.CoreUtils.TransformExtensions.SetLocalPose (UnityEngine.Transform transform, UnityEngine.Pose pose) [0x00000] in .\Library\PackageCache\com.unity.xr.core-utils@a8b900321199\Runtime\Extensions\TransformExtensions.cs:49 
+  at UnityEngine.XR.Interaction.Toolkit.Interactors.XRRayInteractor.RestoreAttachTransform () [0x0000d] in .\Library\PackageCache\com.unity.xr.interaction.toolkit@4612b35e2aac\Runtime\Interaction\Interactors\XRRayInteractor.cs:2869 
+  at UnityEngine.XR.Interaction.Toolkit.Interactors.XRRayInteractor.OnSelectExiting (UnityEngine.XR.Interaction.Toolkit.SelectExitEventArgs args) [0x00028] in .\Library\PackageCache\com.unity.xr.interaction.toolkit@4612b35e2aac\Runtime\Interaction\Interactors\XRRayInteractor.cs:2804 
+  at UnityEngine.XR.Interaction.Toolkit.Interactors.XRBaseInteractor.UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor.OnSelectExiting (UnityEngine.XR.Interaction.Toolkit.SelectExitEventArgs args) [0x00000] in .\Library\PackageCache\com.unity.xr.interaction.toolkit@4612b35e2aac\Runtime\Interaction\Interactors\XRBaseInteractor.cs:787 
+  at UnityEngine.XR.Interaction.Toolkit.XRInteractionManager.SelectExit (UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor interactor, UnityEngine.XR.Interaction.Toolkit.Interactables.IXRSelectInteractable interactable, UnityEngine.XR.Interaction.Toolkit.SelectExitEventArgs args) [0x00056] in .\Library\PackageCache\com.unity.xr.interaction.toolkit@4612b35e2aac\Runtime\Interaction\XRInteractionManager.cs:2554 
+  at UnityEngine.XR.Interaction.Toolkit.XRInteractionManager.SelectCancel (UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor interactor, UnityEngine.XR.Interaction.Toolkit.Interactables.IXRSelectInteractable interactable) [0x00032] in .\Library\PackageCache\com.unity.xr.interaction.toolkit@4612b35e2aac\Runtime\Interaction\XRInteractionManager.cs:2338 
+  at UnityEngine.XR.Interaction.Toolkit.XRInteractionManager.CancelInteractableSelection (UnityEngine.XR.Interaction.Toolkit.Interactables.IXRSelectInteractable interactable) [0x00010] in .\Library\PackageCache\com.unity.xr.interaction.toolkit@4612b35e2aac\Runtime\Interaction\XRInteractionManager.cs:2079 
+  at ResponseEquipmentManager.ClearXrInteraction (UnityEngine.GameObject bagRoot) [0x00059] in <VALIDATION_PROJECT>\Assets\1.JSR\Scripts\ResponseEquipmentManager.cs:1103 
+  at ResponseEquipmentManager.PrepareResponseBag (UnityEngine.GameObject bagRoot, System.Boolean deactivateRoot) [0x0007f] in <VALIDATION_PROJECT>\Assets\1.JSR\Scripts\ResponseEquipmentManager.cs:663 
+  at ResponseEquipmentManager.PrepareResponseBag (UnityEngine.GameObject bagRoot) [0x00000] in <VALIDATION_PROJECT>\Assets\1.JSR\Scripts\ResponseEquipmentManager.cs:637 
+  at ResponseEquipmentManager.TryCompleteResponseBagPreparation () [0x00042] in <VALIDATION_PROJECT>\Assets\1.JSR\Scripts\ResponseEquipmentManager.cs:711 
+  at ResponseBagPrepareInteractable.BeginPreparation () [0x00029] in <VALIDATION_PROJECT>\Assets\1.JSR\Scripts\ResponseBagPrepareInteractable.cs:326 
+  at ResponseBagPrepareInteractable.OnSelectEntered (UnityEngine.XR.Interaction.Toolkit.SelectEnterEventArgs args) [0x00054] in <VALIDATION_PROJECT>\Assets\1.JSR\Scripts\ResponseBagPrepareInteractable.cs:129 
+  at UnityEngine.Events.InvokableCall`1[T1].Invoke (T1 args0) [0x0000d] in <0ed212dbc30045708ade919c1a8365d7>:0 
+  at UnityEngine.Events.UnityEvent`1[T0].Invoke (T0 arg0) [0x0001b] in <0ed212dbc30045708ade919c1a8365d7>:0 
+  at UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable.OnSelectEntered (UnityEngine.XR.Interaction.Toolkit.SelectEnterEventArgs args) [0x00020] in .\Library\PackageCache\com.unity.xr.interaction.toolkit@4612b35e2aac\Runtime\Interaction\Interactables\XRBaseInteractable.cs:1314 
+  at UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable.UnityEngine.XR.Interaction.Toolkit.Interactables.IXRSelectInteractable.OnSelectEntered (UnityEngine.XR.Interaction.Toolkit.SelectEnterEventArgs args) [0x00000] in .\Library\PackageCache\com.unity.xr.interaction.toolkit@4612b35e2aac\Runtime\Interaction\Interactables\XRBaseInteractable.cs:1111 
+  at UnityEngine.XR.Interaction.Toolkit.XRInteractionManager.SelectEnter (UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor interactor, UnityEngine.XR.Interaction.Toolkit.Interactables.IXRSelectInteractable interactable, UnityEngine.XR.Interaction.Toolkit.SelectEnterEventArgs args) [0x0006b] in .\Library\PackageCache\com.unity.xr.interaction.toolkit@4612b35e2aac\Runtime\Interaction\XRInteractionManager.cs:2529 
+  at UnityEngine.XR.Interaction.Toolkit.XRInteractionManager.SelectEnterUnconditionally (UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor interactor, UnityEngine.XR.Interaction.Toolkit.Interactables.IXRSelectInteractable interactable) [0x0003e] in .\Library\PackageCache\com.unity.xr.interaction.toolkit@4612b35e2aac\Runtime\Interaction\XRInteractionManager.cs:2292 
+  at UnityEngine.XR.Interaction.Toolkit.XRInteractionManager.SelectEnter (UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor interactor, UnityEngine.XR.Interaction.Toolkit.Interactables.IXRSelectInteractable interactable) [0x0003e] in .\Library\PackageCache\com.unity.xr.interaction.toolkit@4612b35e2aac\Runtime\Interaction\XRInteractionManager.cs:2264 
+  at ResponseBagPackingTests.ExplicitXriSelect_ConfirmsFullyPackedBag () [0x00006] in <VALIDATION_PROJECT>\Assets\1.JSR\Editor\ResponseBagPackingTests.cs:301 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <f713e1c3c5f545ce9b1df47230f4f853>:0 
+
+full-editmode-results.xml
+PPEInnerGloveHandTintTests.ApplyToHand_TintsThenRestoresDefaultHandColor
+  Expected: RGBA(0.378, 0.495, 0.492, 1.000)
+  But was:  RGBA(0.378, 0.495, 0.492, 1.000)
+
+at PPEInnerGloveHandTintTests.ApplyToHand_TintsThenRestoresDefaultHandColor () [0x00027] in <VALIDATION_PROJECT>\Assets\1.JSR\Editor\PPEInnerGloveHandTintTests.cs:19
+
+
+PPEPortfolioSequenceTests.RecordedPartialLoadout_RemainsAuthoritative_WhenRoomManagersAreMissing
+  Run in an empty EditMode test scene.
+  Expected: null
+  But was:  <null>
+
+at PPEPortfolioSequenceTests.RecordedPartialLoadout_RemainsAuthoritative_WhenRoomManagersAreMissing () [0x00000] in <VALIDATION_PROJECT>\Assets\1.JSR\Editor\PPEPortfolioSequenceTests.cs:180
+
+
+full-editmode-rerun-results.xml
+PPEInnerGloveHandTintTests.ApplyToHand_TintsThenRestoresDefaultHandColor
+  Expected: RGBA(0.378, 0.495, 0.492, 1.000)
+  But was:  RGBA(0.378, 0.495, 0.492, 1.000)
+
+at PPEInnerGloveHandTintTests.ApplyToHand_TintsThenRestoresDefaultHandColor () [0x00027] in <VALIDATION_PROJECT>\Assets\1.JSR\Editor\PPEInnerGloveHandTintTests.cs:19
+
+
+existing-tint-only-results.xml
+PPEInnerGloveHandTintTests.ApplyToHand_TintsThenRestoresDefaultHandColor
+  Expected: RGBA(0.378, 0.495, 0.492, 1.000)
+  But was:  RGBA(0.378, 0.495, 0.492, 1.000)
+
+at PPEInnerGloveHandTintTests.ApplyToHand_TintsThenRestoresDefaultHandColor () [0x00027] in <VALIDATION_PROJECT>\Assets\1.JSR\Editor\PPEInnerGloveHandTintTests.cs:19
+
+
+IMPORT EXIT EVIDENCE
+
+Application.AssetDatabase Initial Refresh End
+Scanning for USB devices : 54.222ms
+Start importing ProjectSettings/EditorBuildSettings.asset using Guid(0000000000000000b000000000000000) (LibraryAssetImporter) -> (Import Result ID: '2413890e44b226e2387ebe99c4b7c044') in 0.0014648 seconds [static dependencies only]. Details - ImportResultOutputID=d777934f36c664454d62eda103573334 DependenciesID=a85af5714f500f83fe53cb4c89f00727 StaticDependenciesID=2345b7104be913074617442c84df9ba5 
+Refreshing native plugins compatible for Editor in 6.23 ms, found 14 plugins.
+Asset Pipeline Refresh (id=eb1f3531061035144abeb4fc155def09): Total: 0.074 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Initializing Unity extensions:
+[Licensing::Client] Successfully resolved entitlement details
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 9889 unused Assets / (39.3 MB). Loaded Objects now: 9769.
+Memory consumption went from 376.7 MB to 337.4 MB.
+Total: 41.659400 ms (FindLiveObjects: 0.984700 ms CreateObjectMapping: 1.320600 ms MarkObjects: 23.498300 ms  DeleteObjects: 13.190900 ms)
+
+Batchmode quit successfully invoked - shutting down!
+Curl error 42: Callback aborted
+Killing ADB server in 2.1648618 seconds.
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-r-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-r channel disconnected successfully.
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+CodeReloadManager destroyed
+Exiting batchmode successfully now!
+Exiting without the bug reporter. Application will terminate with return code 0

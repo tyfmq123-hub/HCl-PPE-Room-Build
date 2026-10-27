@@ -1,5 +1,60 @@
 # PPE Integration Handoff
 
+## 2026-10-27 실제 검증 및 공개 준비 후속 인수인계
+
+- 사용자 확인: 원래 프로젝트는 3명 팀 개발이며 **지원자는 PPE 준비실 Stage 전체의 씬·보호구 인터랙션·교육 흐름·대응 장비 준비·전용 UI·안내와 관련 Stage 기능을 전담 개발**했다. 다른 Stage·공용 App/XR·외부 자산은 구분한다. 10월 보강·회귀 검증은 원래 개발 기간 이후 작업이다.
+- 정확한 **Unity 6000.4.8f1**에서 현재 소스 복사본을 import하고 실제 컴파일 오류 **0개**를 확인했다.
+- 신규 EditMode: 발견·실행 **50개**, 통과 **50**, 실패·Skip·미발견 **0**. Sequence 13, Glove 17, Bag 20개다.
+- 전체 EditMode: **217/218 통과**. 변경하지 않은 기존 손 색상 Color 정확 동등 비교 테스트 1개 실패가 남았다. 최대 채널 차이 약 8.94×10⁻⁸를 측정했으며 assertion이나 gameplay를 완화하지 않았다.
+- 실제 로드한 04_PPE: GameObject 524개·Component 1,048개, Missing Script **0**, 끊어진 직렬화 참조 **0**. 다른 씬과 실기기 동작을 보장하는 결과는 아니다.
+- 테스트 실행 중 확인한 XRI attach 초기화와 Unity null 전제는 fixture 2개에서만 보완했다. 검증을 위해 runtime 성공 조건을 변경하지 않았다. 공용 XR/App·Packages·ProjectSettings·Scene·기존 GUID와 player는 유지했다.
+- **PlayMode smoke·PCVR HMD·Quest Android·새 player 빌드는 미실행**이다. 새 데모/Release의 검증 완료 판정은 보류하며 기존 2026-09-10 빌드·Release를 보존한다.
+- README, 실제 Editor 캡처 3개, 공개용 8장 PPTX/PDF·원고와 자료 목차에 실제 결과와 전담 책임을 반영했다. 2026-09-10 보유 영상은 당시 빌드 기록이며 공개 URL 등록 예정이다.
+- 후속 요청에서 codex/ppe-portfolio-improvement의 커밋·푸시·main 대상 PR 생성이 승인됐다. **PR은 자동 병합하지 않는다.** 팀 저장소는 사용자 요청으로 public 전환·비로그인 접근을 확인했으며 코드·커밋 이력은 바꾸지 않았다.
+- 개인 PC 경로만 치환한 검증 사본을 공개하고 원시 증거·이전 발표 자료·백업은 로컬에 보존한다. 이름·결과·수치·시각은 유지한다.
+
+근거: [테스트 보고서](../../portfolio/02_TEST_REPORT.md), [공개 검증 JSON](../../portfolio/public-validation/20261027-unity6000.4.8f1/actual-validation-summary.json), [포트폴리오 목차](../../portfolio/PORTFOLIO_INDEX.md).
+
+아래 초기 보강 및 과거 기록의 미실행·PASS·게시 상태는 당시 회차의 결과다. 현재 검증은 위 후속 결과를 우선하고 게시 상태는 실제 GitHub 브랜치·PR을 확인한다.
+
+
+## 2026-10-27 초기 포트폴리오 보강 인수인계 (실제 Unity 검증 전 기록)
+
+- 역할: PPE 포트폴리오 보강. 별도 저장소 `HCl-PPE-Room-Build`만 수정.
+- 브랜치: 사용자 지정 `codex/ppe-portfolio-improvement`. 이번 요청이 과거 `feature/ppe` 지침보다 우선한다.
+- 기준 커밋: `871f806165eebb9e03ba944ed95db5af3dc83819`. 이 초기 회차에는 새 커밋·푸시·PR·Release 없음. 후속 공개 작업의 승인과는 구분한다.
+- 원본 팀 저장소, 공용 App/XR, 다른 Stage, Packages/ProjectSettings, Scene 및 기존 GUID·바이너리는 보존했다.
+
+### 수정과 근거
+
+1. `ResponseBagPackingController`의 3종 수납 후 global Select 경로는 입력 손/가방 대상 확인 없이 준비를 완료할 수 있었다. `ResponseBagPrepareInteractable`의 현재 활성 가방 hover/select 및 입력 손 검사로 공용 입력·standalone router·직접 XRI select 경로를 연결했다. 오래된 sticky 선택과 다른 손의 hover가 완료 조건을 우회하지 못하게 했다. 기존 무인자 API는 유지한다. 테이블 reset에서 남은 trigger 접촉 목록도 비운다.
+2. `PPEGlovePairCoordinator`의 두 완료 경로는 `Equip()` 실패 뒤 양손 플래그가 남았다. 최종 등록 실패 시 이번 두 번째 손만 복구하고 재시도하게 했다. `PPEReleaseEquip`은 그 실패를 받아 `NotifyEquipped`를 건너뛴다. 성공 입력·완료 이벤트와 좌우 물리 동작 순서는 유지한다.
+3. PPE 순서/장비/부분 Loadout, 좌우 등록 실패, 실제 XRI 가방 입력을 검사하는 Editor 테스트 3개 fixture와 meta를 추가했다. README·감사·테스트·8장 지원용 포트폴리오 문서를 작성했다.
+
+### 변경 파일과 Inspector 작업
+
+- 런타임: `Assets/1.JSR/Scripts/`의 `PPEGlovePairCoordinator.cs`, `PPEReleaseEquip.cs`, `ResponseBagPackingController.cs`, `ResponseBagPrepareInteractable.cs`, `XRInteractionConfirmRouter.cs`.
+- 테스트: `Assets/1.JSR/Editor/`의 `PPEPortfolioSequenceTests.cs`, `PPEGlovePairStateTests.cs`, `ResponseBagPackingTests.cs` 및 각 `.meta`.
+- 문서: `README.md`, `docs/portfolio/`, 이 인수인계.
+- Inspector/Scene 수동 수정 없음. 직렬화 필드나 공용 계약을 제거하지 않았다.
+
+### 검증과 제한
+
+- clone/LFS 수신 완료, `git lfs fsck` OK, `git diff --check` 공백 오류 없음.
+- C# syntax 및 저장소 정적 검사 기록은 [테스트 보고서](../../portfolio/02_TEST_REPORT.md)와 연결된 JSON을 기준으로 한다. 정적 검사와 Unity 실행을 구분한다.
+- 정확한 Unity `6000.4.8f1`이 확인되지 않아 Unity 컴파일·신규 50사례·기존 회귀·PlayMode·Quest·PCVR·성능 측정은 **미검증/미실행**이다. 다른 Editor로 프로젝트를 열지 않았다.
+- 기존 2026-09-10 실행 빌드와 2026-09-18 소스는 서로 다른 버전이며 이번 수정을 재빌드하지 않았다. 아래 과거 기록의 PASS는 이번 결과가 아니다.
+- 기기에서 Near/Far hover/select와 공용 Grip 이벤트 타이밍·handedness, 실패 후 장갑 재잡기, 부분/완료 reset을 확인한다. 전체 수동 체크리스트는 테스트 보고서에 있다.
+
+### Integration 요청
+
+- `PPE_TASK.md`의 집게 포함 4종과 최신 대본/코드의 3종(측정기·패드·삭) 간 최종 교육 사양 및 집게 전달 경로를 확인한다. 이번에는 항목/공유 ID를 변경하지 않았다.
+- `PPESequenceManager.NotifyEquipBlocked`의 `ContentViewed("PPE.EquipBlocked.*")`는 거절 동작을 열람으로 분류한다. 공용 `IStageTrainingTelemetry`에는 착용 거절 API가 없어 별도 계약·App 소비자·대시보드 집계의 통합 변경을 제안한다. TTS busy 동안 보고가 생략되는 점도 함께 검토한다.
+- 현행 `PPE.asset`의 Near 활성/Far 비활성과 과거 Shared XR 문서의 Standard Ray 표를 일치시킨다. 공용 문서를 임의로 수정하지 않았다.
+- controller tracking fallback의 active Transform 판단과 단일 장비 비동기 등록 반환은 후속 검토 항목이다.
+
+---
+
 ## Work metadata
 
 - Role: PPE

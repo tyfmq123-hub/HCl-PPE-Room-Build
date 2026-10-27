@@ -1,0 +1,145 @@
+{
+  "purpose": "Public derivatives of actual Unity verification, with local machine paths redacted.",
+  "redaction_scope": "Local project, user-home, editor-install and backup paths only. XML serialization normalized; counts, test full names, assertions, results, timings and failure classifications preserved.",
+  "raw_evidence": "Retained locally with a recoverable backup. Raw original files and full Editor logs are intentionally not committed.",
+  "new_regressions": {
+    "total": 50,
+    "passed": 50,
+    "failed": 0,
+    "skipped": 0,
+    "undiscovered": 0
+  },
+  "all_editmode": {
+    "total": 218,
+    "passed": 217,
+    "failed": 1,
+    "skipped": 0
+  },
+  "not_validated": [
+    "PCVR headset",
+    "Quest Android",
+    "PlayMode smoke",
+    "new player build"
+  ],
+  "files": [
+    {
+      "source": "docs/portfolio/validation/20261027-unity6000.4.8f1/actual-validation-summary.json",
+      "public": "docs/portfolio/public-validation/20261027-unity6000.4.8f1/actual-validation-summary.json",
+      "raw_sha256": "ff4d2d1c81eb6964f7f5aff28c1175a2f401c04d73b9fe2850134cf84eed4dd6",
+      "public_sha256": "c90c5de9dc73bd0743b99d9a7b9dfa09b72317fcb86b13c8204e797b712e743d",
+      "raw_unchanged": true
+    },
+    {
+      "source": "docs/portfolio/validation/20261027-unity6000.4.8f1/diagnostics.txt",
+      "public": "docs/portfolio/public-validation/20261027-unity6000.4.8f1/diagnostics.txt",
+      "raw_sha256": "2bf9dc749f243e49839c8801eaaf030383f77a1e130ed794bc2b2ec25587288f",
+      "public_sha256": "64524f07b580d8442a61aa3d7cf57bb440dd812178016567295f40a15a7eeea4",
+      "raw_unchanged": true
+    },
+    {
+      "source": "docs/portfolio/validation/20261027-unity6000.4.8f1/new-50-results.xml",
+      "public": "docs/portfolio/public-validation/20261027-unity6000.4.8f1/new-50-results.xml",
+      "raw_sha256": "844350fdc3a276c1a6571cd47ceb2473bc386288ad9509f318160ea449b325c1",
+      "public_sha256": "ad5ad607377bd67c27850c4fc2a0633acc0a22290f7448e0a8b16583faac2570",
+      "raw_unchanged": true
+    },
+    {
+      "source": "docs/portfolio/validation/20261027-unity6000.4.8f1/new-50-rerun-results.xml",
+      "public": "docs/portfolio/public-validation/20261027-unity6000.4.8f1/new-50-rerun-results.xml",
+      "raw_sha256": "c380b0ced072e95538e10e59577854843fd0e54f850e6235f0a47df29a9ef2dd",
+      "public_sha256": "8c6ac312764170ce38febd2d7bad7b7399662923a8ccd2e906ed3764111e4aaf",
+      "raw_unchanged": true
+    },
+    {
+      "source": "docs/portfolio/validation/20261027-unity6000.4.8f1/full-editmode-results.xml",
+      "public": "docs/portfolio/public-validation/20261027-unity6000.4.8f1/full-editmode-results.xml",
+      "raw_sha256": "e72fee606022938ede484b900f8132b49d250ec012d6c6c2a6ebc13e8b534a30",
+      "public_sha256": "4581f4106419d7ea2691acffc2c013a2e98c4540d7cd959b8b02eca4dac57d64",
+      "raw_unchanged": true
+    },
+    {
+      "source": "docs/portfolio/validation/20261027-unity6000.4.8f1/full-editmode-rerun-results.xml",
+      "public": "docs/portfolio/public-validation/20261027-unity6000.4.8f1/full-editmode-rerun-results.xml",
+      "raw_sha256": "518fb47dd2b9eae971008b1bf8e459f26c227ea3b795bca4625b0dfe53c0cd6e",
+      "public_sha256": "464fac40962fb3cba185fc903006ae9e9e847f03b8a2a2fc9c68f15f388a8879",
+      "raw_unchanged": true
+    },
+    {
+      "source": "docs/portfolio/validation/20261027-unity6000.4.8f1/existing-tint-only-results.xml",
+      "public": "docs/portfolio/public-validation/20261027-unity6000.4.8f1/existing-tint-only-results.xml",
+      "raw_sha256": "1bcddc74ceabd90543a372fee775c674cd7f9129803275ddde18559238a003f8",
+      "public_sha256": "6f3dc0b541228f317e3f347578643a7b92e2ba93eec58824c0f5bacd16c3c1ca",
+      "raw_unchanged": true
+    },
+    {
+      "source": "docs/portfolio/validation/20261027-unity6000.4.8f1/scene-and-discovery.json",
+      "public": "docs/portfolio/public-validation/20261027-unity6000.4.8f1/scene-and-discovery.json",
+      "raw_sha256": "c010107f97a16250da99f731df0eaceff58b5f6b9d5096757a6a62d2e2701fbc",
+      "public_sha256": "faf7bc252c72eb187ece8accfd12f511cbbbdfccafe3e9cf4155d03d95abe05e",
+      "raw_unchanged": true
+    },
+    {
+      "source": "docs/portfolio/validation/20261027-unity6000.4.8f1/import-process.json",
+      "public": "docs/portfolio/public-validation/20261027-unity6000.4.8f1/import-process.json",
+      "raw_sha256": "18588726fe12699279ced687a2c454ddf847ed3d381934f6644f0d60efc84c84",
+      "public_sha256": "18588726fe12699279ced687a2c454ddf847ed3d381934f6644f0d60efc84c84",
+      "raw_unchanged": true
+    },
+    {
+      "source": "docs/portfolio/validation/20261027-unity6000.4.8f1/new-50-process.json",
+      "public": "docs/portfolio/public-validation/20261027-unity6000.4.8f1/new-50-process.json",
+      "raw_sha256": "190e6123e7cdc42b92e11e92cbfff9f5845b874ed16304c116ff7f5a22043570",
+      "public_sha256": "190e6123e7cdc42b92e11e92cbfff9f5845b874ed16304c116ff7f5a22043570",
+      "raw_unchanged": true
+    },
+    {
+      "source": "docs/portfolio/validation/20261027-unity6000.4.8f1/new-50-rerun-process.json",
+      "public": "docs/portfolio/public-validation/20261027-unity6000.4.8f1/new-50-rerun-process.json",
+      "raw_sha256": "95fc50429b343337015b137134d541bc7509e1366b9d52ca56774d6bd9ee17a7",
+      "public_sha256": "95fc50429b343337015b137134d541bc7509e1366b9d52ca56774d6bd9ee17a7",
+      "raw_unchanged": true
+    },
+    {
+      "source": "docs/portfolio/validation/20261027-unity6000.4.8f1/full-editmode-process.json",
+      "public": "docs/portfolio/public-validation/20261027-unity6000.4.8f1/full-editmode-process.json",
+      "raw_sha256": "8a7079f2ed7be1c7352f2c39848416aa43ce382c01b997d96008e814ae5b3c4c",
+      "public_sha256": "8a7079f2ed7be1c7352f2c39848416aa43ce382c01b997d96008e814ae5b3c4c",
+      "raw_unchanged": true
+    },
+    {
+      "source": "docs/portfolio/validation/20261027-unity6000.4.8f1/full-editmode-rerun-process.json",
+      "public": "docs/portfolio/public-validation/20261027-unity6000.4.8f1/full-editmode-rerun-process.json",
+      "raw_sha256": "891f4b0ef4a769577ed8e108e5bbfbd7fae62a3c6474a754554398dae90829a8",
+      "public_sha256": "891f4b0ef4a769577ed8e108e5bbfbd7fae62a3c6474a754554398dae90829a8",
+      "raw_unchanged": true
+    },
+    {
+      "source": "docs/portfolio/validation/20261027-unity6000.4.8f1/existing-tint-only-process.json",
+      "public": "docs/portfolio/public-validation/20261027-unity6000.4.8f1/existing-tint-only-process.json",
+      "raw_sha256": "8a03fc196b9d194707362d92d73023de985dabf94edd93eabca887102f2b5f96",
+      "public_sha256": "8a03fc196b9d194707362d92d73023de985dabf94edd93eabca887102f2b5f96",
+      "raw_unchanged": true
+    },
+    {
+      "source": "docs/portfolio/validation/20261027-unity6000.4.8f1/scene-and-discovery-process.json",
+      "public": "docs/portfolio/public-validation/20261027-unity6000.4.8f1/scene-and-discovery-process.json",
+      "raw_sha256": "0864ff677f99e024d09eb123e3acb8da144ac4bbfe622f58e1b096cb396b7911",
+      "public_sha256": "0864ff677f99e024d09eb123e3acb8da144ac4bbfe622f58e1b096cb396b7911",
+      "raw_unchanged": true
+    },
+    {
+      "source": "docs/portfolio/media/20261027-verified/gui-new-50-results.xml",
+      "public": "docs/portfolio/public-validation/20261027-unity6000.4.8f1/gui-new-50-results.xml",
+      "raw_sha256": "0b4d49059ed579110f30fed12c68faea78a1f4ff140800c999486700960505a3",
+      "public_sha256": "364044faa9afbb0a8751d3c1e7fcda91b6da507b2437c98a85e5ea6ddc65657d",
+      "raw_unchanged": true
+    },
+    {
+      "source": "docs/portfolio/media/20261027-verified/capture-provenance.json",
+      "public": "docs/portfolio/public-validation/20261027-unity6000.4.8f1/capture-provenance.json",
+      "raw_sha256": "0cd2955f3309baa9a579fca2a0e5af21fb9603b1cea23d6292ba31aa9f2c4da1",
+      "public_sha256": "32a1165c2c18bcf7decc3763aa4d19de651afe849716d799a90e6782f805e2d5",
+      "raw_unchanged": true
+    }
+  ]
+}
