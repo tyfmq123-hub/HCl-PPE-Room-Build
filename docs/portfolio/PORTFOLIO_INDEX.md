@@ -13,6 +13,7 @@
 | 기술 감사 | [01_TECHNICAL_AUDIT.md](01_TECHNICAL_AUDIT.md) |
 | 실제 테스트·수동 검수표 | [02_TEST_REPORT.md](02_TEST_REPORT.md) |
 | 변경·검증 작업 요약 | [04_WORK_SUMMARY_KO.md](04_WORK_SUMMARY_KO.md) |
+| 공개 브랜치·PR 및 지원 전 수동 작업 | [05_PUBLICATION_REPORT_KO.md](05_PUBLICATION_REPORT_KO.md) |
 
 PDF는 최종 편집 가능한 PPTX를 실제 PowerPoint에서 변환한 8장 자료입니다. 이전 PPTX와 제작 원본은 보존하며, 최신 공개용 발표 자료는 위 파일을 기준으로 합니다.
 

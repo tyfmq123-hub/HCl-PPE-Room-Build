@@ -114,6 +114,8 @@ PPE 전용 빌드 프로필은 Assets/Settings/Build Profiles/PPE Portfolio Demo
 
 ## 자료와 제한
 
+최신 개선 자료는 [공개 작업 브랜치](https://github.com/tyfmq123-hub/HCl-PPE-Room-Build/tree/codex/ppe-portfolio-improvement)와 [검토용 PR #1](https://github.com/tyfmq123-hub/HCl-PPE-Room-Build/pull/1)에 있으며 아직 main에 병합하지 않았습니다. [공개 결과와 지원 전 수동 작업](docs/portfolio/05_PUBLICATION_REPORT_KO.md)을 함께 확인할 수 있습니다.
+
 - [포트폴리오 목차](docs/portfolio/PORTFOLIO_INDEX.md): 발표 자료, 기술 감사, 테스트와 중요 소스
 - [기술 감사](docs/portfolio/01_TECHNICAL_AUDIT.md): 구현 근거, 공용 계약과 남은 위험
 - [작업 요약](docs/portfolio/04_WORK_SUMMARY_KO.md): 원래 개발과 후속 보강·검증의 구분
