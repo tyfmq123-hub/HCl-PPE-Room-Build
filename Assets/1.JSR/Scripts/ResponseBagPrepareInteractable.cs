@@ -1,6 +1,8 @@
+using HClTraining.SharedXR;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
+using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
 /// <summary>
 /// Ray-select the world response bag (PPE outline sticky), then confirm preparation via
@@ -112,7 +114,7 @@ public class ResponseBagPrepareInteractable : MonoBehaviour
             interactable.activated.AddListener(OnActivated);
     }
 
-    void OnSelectEntered(SelectEnterEventArgs _)
+    void OnSelectEntered(SelectEnterEventArgs args)
     {
         if (equipmentManager != null && equipmentManager.IsResponseBagPrepared())
             return;
@@ -123,7 +125,7 @@ public class ResponseBagPrepareInteractable : MonoBehaviour
         // Packing owns when the bag becomes selectable. The first Grip after all
         // three items have been packed is the explicit "take the bag" action.
         var packing = ResponseBagPackingController.Instance;
-        if (packing != null && packing.AllPacked)
+        if (packing != null && CanConfirmPackingGrip(ToSharedHand(args.interactorObject), args.interactorObject))
             BeginPreparation();
     }
 
@@ -140,8 +142,20 @@ public class ResponseBagPrepareInteractable : MonoBehaviour
         // No outline: allow sticky bagSelected until prepare / disable.
     }
 
-    void OnActivated(ActivateEventArgs _)
+    void OnActivated(ActivateEventArgs args)
     {
+        // Legacy Activate ownership still receives an explicit XRI event. In the
+        // packing flow that exact interactor must target this bag, even when its
+        // handedness is unavailable; another hand's hover cannot authorize it.
+        if (ResponseBagPackingController.Instance != null)
+        {
+            if (args == null || args.interactorObject == null ||
+                !CanConfirmPackingGrip(ToSharedHand(args.interactorObject), args.interactorObject))
+                return;
+            BeginPreparation();
+            return;
+        }
+
         if (!CanConfirmPreparation())
             return;
 
@@ -177,6 +191,11 @@ public class ResponseBagPrepareInteractable : MonoBehaviour
         if (interactable == null)
             return false;
 
+        // In the packing flow, an old sticky selection cannot authorize a later
+        // Grip elsewhere. Keep the legacy public confirmation entry guarded too.
+        if (ResponseBagPackingController.Instance != null && !CanConfirmPackingGrip(null))
+            return false;
+
         if (!interactable.transform.IsChildOf(root.transform)
             && interactable.transform != root.transform)
             return false;
@@ -200,9 +219,24 @@ public class ResponseBagPrepareInteractable : MonoBehaviour
     /// </summary>
     public bool TryPrepareFromPackingGripHover()
     {
+        return TryPrepareFromPackingGripHover(null);
+    }
+
+    /// <summary>Uses the currently targeting interactor from the actual input hand.</summary>
+    public bool TryPrepareFromPackingGripHover(SharedXRHand? inputHand)
+    {
         ResolveRefs();
 
-        if (preparationInProgress || interactable == null || !interactable.isHovered)
+        if (!CanConfirmPackingGrip(inputHand))
+            return false;
+
+        return BeginPreparation();
+    }
+
+    bool CanConfirmPackingGrip(SharedXRHand? inputHand, IXRInteractor inputInteractor = null)
+    {
+        if (!isActiveAndEnabled || preparationInProgress ||
+            interactable == null || !interactable.isActiveAndEnabled)
             return false;
 
         var packing = ResponseBagPackingController.Instance;
@@ -213,10 +247,46 @@ public class ResponseBagPrepareInteractable : MonoBehaviour
             return false;
 
         var root = responseBagRoot != null ? responseBagRoot : gameObject;
-        if (root == null || !root.activeInHierarchy)
+        if (root == null || !root.activeInHierarchy || equipmentManager.ResponseBagRoot != root ||
+            (interactable.transform != root.transform && !interactable.transform.IsChildOf(root.transform)))
             return false;
 
-        return BeginPreparation();
+        // Hover works for both Ray and Near/Far without depending on XRI callback
+        // order. Selection is explicit interaction too. Never use sticky outline
+        // state or a far ray's attach point as evidence of a current target.
+        for (var i = 0; i < interactable.interactorsHovering.Count; i++)
+            if (MatchesInputHand(interactable.interactorsHovering[i], inputHand, inputInteractor))
+                return true;
+        for (var i = 0; i < interactable.interactorsSelecting.Count; i++)
+            if (MatchesInputHand(interactable.interactorsSelecting[i], inputHand, inputInteractor))
+                return true;
+        return false;
+    }
+
+    static bool MatchesInputHand(IXRInteractor interactor, SharedXRHand? inputHand, IXRInteractor inputInteractor)
+    {
+        if (interactor == null || interactor.transform == null ||
+            !interactor.transform.gameObject.activeInHierarchy ||
+            (interactor is Behaviour behaviour && !behaviour.isActiveAndEnabled))
+            return false;
+        if (inputInteractor != null && !ReferenceEquals(interactor, inputInteractor))
+            return false;
+
+        // Existing no-argument API and simulator inputs may not identify a hand;
+        // those still require a live bag target. Known physical input must match.
+        return !inputHand.HasValue || ToSharedHand(interactor) == inputHand;
+    }
+
+    static SharedXRHand? ToSharedHand(IXRInteractor interactor)
+    {
+        if (interactor == null)
+            return null;
+        switch (interactor.handedness)
+        {
+            case InteractorHandedness.Left: return SharedXRHand.Left;
+            case InteractorHandedness.Right: return SharedXRHand.Right;
+            default: return null;
+        }
     }
 
     bool IsStickySelected()
