@@ -1,0 +1,276 @@
+{
+  "checked_date": "2026-10-27",
+  "method": "Read sfnt name tables directly; font binaries unchanged. Copyright and license statements below are embedded font metadata, not a new license grant.",
+  "fonts": [
+    {
+      "path": "Assets/1.JSR/Fonts/PPE/Pretendard-SemiBold.otf",
+      "sha256": "eac28ccfd1f74e7a2c01b0ed1a654b4bae50de97b394679d2ad19dcfc3449f01",
+      "embedded_name_entries": [
+        {
+          "name_id": 1,
+          "text": "Pretendard SemiBold"
+        },
+        {
+          "name_id": 5,
+          "text": "Version 1.301;FEAKit 1.0"
+        },
+        {
+          "name_id": 0,
+          "text": "Copyright © 2022 Kil Hyung-jin"
+        },
+        {
+          "name_id": 8,
+          "text": "Kil Hyung-jin"
+        },
+        {
+          "name_id": 9,
+          "text": "Base glyphs from Inter by Rasmus Andersson; Hangul glyphs from Noto Sans CJK(Source Han Sans) by Jang Soo-young and Kang Joo-yeon, Sandoll Communications; Kana glyphs from M PLUS 1p by Coji Morishita, UNDERFOREST DESIGN; Combined and redesigned to Pretendard by Kil Hyung-jin."
+        },
+        {
+          "name_id": 13,
+          "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL"
+        },
+        {
+          "name_id": 14,
+          "text": "http://scripts.sil.org/OFL"
+        },
+        {
+          "name_id": 0,
+          "text": "Copyright © 2022 길형진"
+        },
+        {
+          "name_id": 8,
+          "text": "길형진"
+        }
+      ]
+    },
+    {
+      "path": "Assets/1.JSR/Resources/Pretendard-SemiBold.otf",
+      "sha256": "eac28ccfd1f74e7a2c01b0ed1a654b4bae50de97b394679d2ad19dcfc3449f01",
+      "embedded_name_entries": [
+        {
+          "name_id": 1,
+          "text": "Pretendard SemiBold"
+        },
+        {
+          "name_id": 5,
+          "text": "Version 1.301;FEAKit 1.0"
+        },
+        {
+          "name_id": 0,
+          "text": "Copyright © 2022 Kil Hyung-jin"
+        },
+        {
+          "name_id": 8,
+          "text": "Kil Hyung-jin"
+        },
+        {
+          "name_id": 9,
+          "text": "Base glyphs from Inter by Rasmus Andersson; Hangul glyphs from Noto Sans CJK(Source Han Sans) by Jang Soo-young and Kang Joo-yeon, Sandoll Communications; Kana glyphs from M PLUS 1p by Coji Morishita, UNDERFOREST DESIGN; Combined and redesigned to Pretendard by Kil Hyung-jin."
+        },
+        {
+          "name_id": 13,
+          "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL"
+        },
+        {
+          "name_id": 14,
+          "text": "http://scripts.sil.org/OFL"
+        },
+        {
+          "name_id": 0,
+          "text": "Copyright © 2022 길형진"
+        },
+        {
+          "name_id": 8,
+          "text": "길형진"
+        }
+      ]
+    },
+    {
+      "path": "Assets/2.YJH/UI/Fonts/NotoSansKR-Regular.otf",
+      "sha256": "69975a0ac8472717870aefeab0a4d52739308d90856b9955313b2ad5e0148d68",
+      "embedded_name_entries": [
+        {
+          "name_id": 0,
+          "text": "© 2014-2021 Adobe (http://www.adobe.com/)."
+        },
+        {
+          "name_id": 1,
+          "text": "Noto Sans KR"
+        },
+        {
+          "name_id": 5,
+          "text": "Version 2.004;hotconv 1.0.118;makeotfexe 2.5.65603"
+        },
+        {
+          "name_id": 8,
+          "text": "Adobe"
+        },
+        {
+          "name_id": 9,
+          "text": "Ryoko NISHIZUKA 西塚涼子 (kana, bopomofo & ideographs); Paul D. Hunt (Latin, Greek & Cyrillic); Sandoll Communications 산돌커뮤니케이션, Soo-young JANG 장수영 & Joo-yeon KANG 강주연 (hangul elements, letters & syllables)"
+        },
+        {
+          "name_id": 13,
+          "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software."
+        },
+        {
+          "name_id": 14,
+          "text": "http://scripts.sil.org/OFL"
+        }
+      ]
+    },
+    {
+      "path": "Assets/2.YJH/UI/Fonts/Pretendard-SemiBold.otf",
+      "sha256": "eac28ccfd1f74e7a2c01b0ed1a654b4bae50de97b394679d2ad19dcfc3449f01",
+      "embedded_name_entries": [
+        {
+          "name_id": 1,
+          "text": "Pretendard SemiBold"
+        },
+        {
+          "name_id": 5,
+          "text": "Version 1.301;FEAKit 1.0"
+        },
+        {
+          "name_id": 0,
+          "text": "Copyright © 2022 Kil Hyung-jin"
+        },
+        {
+          "name_id": 8,
+          "text": "Kil Hyung-jin"
+        },
+        {
+          "name_id": 9,
+          "text": "Base glyphs from Inter by Rasmus Andersson; Hangul glyphs from Noto Sans CJK(Source Han Sans) by Jang Soo-young and Kang Joo-yeon, Sandoll Communications; Kana glyphs from M PLUS 1p by Coji Morishita, UNDERFOREST DESIGN; Combined and redesigned to Pretendard by Kil Hyung-jin."
+        },
+        {
+          "name_id": 13,
+          "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL"
+        },
+        {
+          "name_id": 14,
+          "text": "http://scripts.sil.org/OFL"
+        },
+        {
+          "name_id": 0,
+          "text": "Copyright © 2022 길형진"
+        },
+        {
+          "name_id": 8,
+          "text": "길형진"
+        }
+      ]
+    },
+    {
+      "path": "Assets/3.SSH/Font/Pretendard-SemiBold.otf",
+      "sha256": "eac28ccfd1f74e7a2c01b0ed1a654b4bae50de97b394679d2ad19dcfc3449f01",
+      "embedded_name_entries": [
+        {
+          "name_id": 1,
+          "text": "Pretendard SemiBold"
+        },
+        {
+          "name_id": 5,
+          "text": "Version 1.301;FEAKit 1.0"
+        },
+        {
+          "name_id": 0,
+          "text": "Copyright © 2022 Kil Hyung-jin"
+        },
+        {
+          "name_id": 8,
+          "text": "Kil Hyung-jin"
+        },
+        {
+          "name_id": 9,
+          "text": "Base glyphs from Inter by Rasmus Andersson; Hangul glyphs from Noto Sans CJK(Source Han Sans) by Jang Soo-young and Kang Joo-yeon, Sandoll Communications; Kana glyphs from M PLUS 1p by Coji Morishita, UNDERFOREST DESIGN; Combined and redesigned to Pretendard by Kil Hyung-jin."
+        },
+        {
+          "name_id": 13,
+          "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL"
+        },
+        {
+          "name_id": 14,
+          "text": "http://scripts.sil.org/OFL"
+        },
+        {
+          "name_id": 0,
+          "text": "Copyright © 2022 길형진"
+        },
+        {
+          "name_id": 8,
+          "text": "길형진"
+        }
+      ]
+    },
+    {
+      "path": "Assets/Samples/XR Hands/1.7.3/Hand Capture/Materials/Fonts/Inter/Inter-Regular.ttf",
+      "sha256": "b02e565207c8d42459ad8e3795babf8a9f3fe337508da7f0c74b60ab6f8f81e7",
+      "embedded_name_entries": [
+        {
+          "name_id": 0,
+          "text": "Copyright 2019 The Inter project authors"
+        },
+        {
+          "name_id": 1,
+          "text": "Inter"
+        },
+        {
+          "name_id": 5,
+          "text": "Version 3.010;git-aca7606f2"
+        },
+        {
+          "name_id": 8,
+          "text": "rsms"
+        },
+        {
+          "name_id": 9,
+          "text": "Rasmus Andersson"
+        },
+        {
+          "name_id": 13,
+          "text": "OFL 1.1 (SIL Open Font License, Version 1.1)"
+        },
+        {
+          "name_id": 14,
+          "text": "http://scripts.sil.org/OFL"
+        }
+      ]
+    },
+    {
+      "path": "Assets/TextMesh Pro/Fonts/LiberationSans.ttf",
+      "sha256": "e5b0af421ea2bfbc1ac8d251d647268087ae82786234c57f757d1f0b90fa8b49",
+      "embedded_name_entries": [
+        {
+          "name_id": 0,
+          "text": "Digitized data copyright (c) 2010 Google Corporation. \nCopyright (c) 2012 Red Hat, Inc."
+        },
+        {
+          "name_id": 1,
+          "text": "Liberation Sans"
+        },
+        {
+          "name_id": 5,
+          "text": "Version 2.00.1"
+        },
+        {
+          "name_id": 8,
+          "text": "Ascender Corporation"
+        },
+        {
+          "name_id": 9,
+          "text": "Steve Matteson"
+        },
+        {
+          "name_id": 13,
+          "text": "Licensed under the SIL Open Font License, Version 1.1"
+        },
+        {
+          "name_id": 14,
+          "text": "http://scripts.sil.org/OFL"
+        }
+      ]
+    }
+  ]
+}

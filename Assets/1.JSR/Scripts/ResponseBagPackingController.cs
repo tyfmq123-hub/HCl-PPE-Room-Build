@@ -128,7 +128,7 @@ public sealed class ResponseBagPackingController : MonoBehaviour
         finalGripSubscribed = false;
     }
 
-    void OnSharedInputPerformed(SharedXRHand _, SharedXRControl control)
+    void OnSharedInputPerformed(SharedXRHand hand, SharedXRControl control)
     {
         if (control != SharedXRControl.Select || !AllPacked)
             return;
@@ -138,16 +138,19 @@ public sealed class ResponseBagPackingController : MonoBehaviour
         if (equipmentManager == null || equipmentManager.IsResponseBagPrepared())
             return;
 
-        // Once all three items are packed, the next physical Grip is exclusively
-        // the "take the response bag" action. Do not depend on ray/hover/select
-        // classification because the PPE room uses a NearFar hand interactor.
-        if (equipmentManager.TryCompleteResponseBagPreparation())
+        // The shared signal is global: packing readiness alone does not mean the
+        // trainee is interacting with this bag. Reuse the same live target guard
+        // as the standalone router, including the hand that performed the Grip.
+        var bag = equipmentManager.ResponseBagRoot;
+        var prepare = bag != null ? bag.GetComponent<ResponseBagPrepareInteractable>() : null;
+        if (prepare != null && prepare.TryPrepareFromPackingGripHover(hand))
             Debug.Log("[PPE Packing] Final Grip confirmed — response bag collected.", this);
     }
 
     public void RestoreTableLayout()
     {
         packedItems.Clear();
+        insideTrigger.Clear();
         captureStarted = false;
         tableReady = false;
         foreach (var running in fallWatches.Values)

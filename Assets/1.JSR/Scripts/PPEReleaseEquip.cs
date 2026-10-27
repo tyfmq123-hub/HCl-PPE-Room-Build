@@ -104,7 +104,8 @@ public static class PPEReleaseEquip
         if (result != "EQUIP_LEFT" && result != "EQUIP_RIGHT")
             return false;
 
-        coordinator.NotifyPairSideFromRelease(member);
+        if (!coordinator.NotifyPairSideFromRelease(member))
+            return false;
         member.GetComponent<PPEStoredDisplayState>()?.NotifyEquipped();
         return true;
     }

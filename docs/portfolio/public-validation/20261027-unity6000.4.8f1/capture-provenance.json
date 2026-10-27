@@ -1,0 +1,105 @@
+{
+  "captured_at_local": "2026-10-27T14:14:31.4908615+09:00",
+  "editor_version": "6000.4.8f1",
+  "editor_revision": "f8b72d3d7343",
+  "source_project": "<VALIDATION_PROJECT>",
+  "capture_method": "Actual Unity Editor windows via Computer Use; original pixels saved without alteration",
+  "scene_view": "Assets/Scenes/04_PPE.unity, EditMode, actual scene overview and PPE equipment/sequence Inspector",
+  "test_runner": {
+    "mode": "EditMode",
+    "selected_cases": 50,
+    "passed": 50,
+    "failed": 0,
+    "skipped": 0,
+    "other_discovered_cases_not_run_in_this_selected_rerun": 168,
+    "xml": "gui-new-50-results.xml",
+    "start_utc": "2026-10-27 05:11:44Z",
+    "end_utc": "2026-10-27 05:11:44Z",
+    "console": {
+      "logs": 369,
+      "warnings": 6,
+      "errors": 0
+    }
+  },
+  "full_suite_result_source": "../../validation/20261027-unity6000.4.8f1/full-editmode-rerun-results.xml",
+  "full_suite_passed": 217,
+  "full_suite_total": 218,
+  "hmd_capture": false,
+  "playmode_executed": false,
+  "player_build_created": false,
+  "original_repository_source_changes_this_portfolio_turn": false,
+  "source_checks": [
+    {
+      "path": "Assets/1.JSR/Scripts/PPEGlovePairCoordinator.cs",
+      "unchanged_since_unity_validation": true,
+      "sha256": "3b29f3e275ffaa33d9d1cb72a3b9130fb29da3891468022b577059cf618b6d6a"
+    },
+    {
+      "path": "Assets/1.JSR/Scripts/PPEReleaseEquip.cs",
+      "unchanged_since_unity_validation": true,
+      "sha256": "feddd3d26436124529af153f28c37cbad752d6cd9a50cbdc379c387f318dd81c"
+    },
+    {
+      "path": "Assets/1.JSR/Scripts/ResponseBagPackingController.cs",
+      "unchanged_since_unity_validation": true,
+      "sha256": "4ad6e73b83d65c7e5f4909c7f232d2074f8a0210b5445740810db1aaca549b1e"
+    },
+    {
+      "path": "Assets/1.JSR/Scripts/ResponseBagPrepareInteractable.cs",
+      "unchanged_since_unity_validation": true,
+      "sha256": "3ef7cae277d8d1e0b700449b9cc46c03ff86052f834ab29e5d99128c382b2d22"
+    },
+    {
+      "path": "Assets/1.JSR/Scripts/XRInteractionConfirmRouter.cs",
+      "unchanged_since_unity_validation": true,
+      "sha256": "1f23a9eb629855daa0277d4ad40914b8156a2fab76e05b78aad56890fb86bbe5"
+    },
+    {
+      "path": "Assets/1.JSR/Editor/PPEPortfolioSequenceTests.cs",
+      "unchanged_since_unity_validation": true,
+      "sha256": "1c302e30aa06b9b9f12afc5582da6a978d5a81fd98aa64180517596f90796be1"
+    },
+    {
+      "path": "Assets/1.JSR/Editor/PPEGlovePairStateTests.cs",
+      "unchanged_since_unity_validation": true,
+      "sha256": "234df258e2eb66dd81994a10109cb2f3bc7ebf10ed0786654b2c0f0095c94108"
+    },
+    {
+      "path": "Assets/1.JSR/Editor/ResponseBagPackingTests.cs",
+      "unchanged_since_unity_validation": true,
+      "sha256": "919d203832c6d85183b9bd89d6420518e829e45b076665447f23b379b7f8b920"
+    }
+  ],
+  "files": [
+    {
+      "name": "gui-new-50-results.xml",
+      "bytes": 65562,
+      "sha256": "0b4d49059ed579110f30fed12c68faea78a1f4ff140800c999486700960505a3"
+    },
+    {
+      "name": "ppe-editor-hierarchy.png",
+      "bytes": 235602,
+      "sha256": "fd73651ddd34837ab714cf084584b340ad36635f7ebfb2b35f781f3626149568"
+    },
+    {
+      "name": "ppe-editor-overview.png",
+      "bytes": 182218,
+      "sha256": "941b58f02f62b4a583713e09a7460f061122c8a15ba022377c489542d58f1b34"
+    },
+    {
+      "name": "unity-test-runner-and-console.png",
+      "bytes": 216285,
+      "sha256": "a366ea1e9d42d9102c0a831e304b53da67ccc90d800634ba6691ae681a401bb4"
+    },
+    {
+      "name": "unity-test-runner-fullscreen.png",
+      "bytes": 100564,
+      "sha256": "19500bb1350daedb085bdc739b4c97c68408342c822f94d8de517fe003a40fe5"
+    },
+    {
+      "name": "unity-test-runner.png",
+      "bytes": 31451,
+      "sha256": "eede130028335e8f1e51734b6b0605f4c0617c04556ea2f5afec922c272f23c5"
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "editorVersion": "6000.4.8f1",
+  "projectPath": "<VALIDATION_PROJECT>",
+  "completedAtUtc": "2026-10-27T04:45:23.0036130Z",
+  "scenePath": "Assets/Scenes/04_PPE.unity",
+  "sceneGameObjects": 524,
+  "sceneComponents": 1048,
+  "missingScriptCount": 0,
+  "missingScriptObjects": [],
+  "brokenReferences": [],
+  "scanErrors": [],
+  "totalDiscoveredLeaves": 218,
+  "sequenceCases": 13,
+  "gloveCases": 17,
+  "bagCases": 20,
+  "newCases": [
+    {
+      "fullName": "PPEGlovePairStateTests.BothSides_RegisterOneLogicalItemAndAdvanceOnce(Left)",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "PPEGlovePairStateTests.BothSides_RegisterOneLogicalItemAndAdvanceOnce(Right)",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "PPEGlovePairStateTests.DuplicatePartialSide_DoesNotCountAsBothSides",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "PPEGlovePairStateTests.FirstSide_DoesNotCompleteLogicalEquipment(Left)",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "PPEGlovePairStateTests.FirstSide_DoesNotCompleteLogicalEquipment(Right)",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "PPEGlovePairStateTests.MemberFromAnotherPair_IsRejectedWithoutMutation",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "PPEGlovePairStateTests.MissingManager_RollsBackSecondSideForRetry(False,Left)",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "PPEGlovePairStateTests.MissingManager_RollsBackSecondSideForRetry(False,Right)",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "PPEGlovePairStateTests.MissingManager_RollsBackSecondSideForRetry(True,Left)",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "PPEGlovePairStateTests.MissingManager_RollsBackSecondSideForRetry(True,Right)",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "PPEGlovePairStateTests.PairRelease_PropagatesRegistrationFailureToStoredState",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "PPEGlovePairStateTests.RejectedLogicalEquip_RollsBackOnlySecondSideAndCanRetry(False,Left)",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "PPEGlovePairStateTests.RejectedLogicalEquip_RollsBackOnlySecondSideAndCanRetry(False,Right)",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "PPEGlovePairStateTests.RejectedLogicalEquip_RollsBackOnlySecondSideAndCanRetry(True,Left)",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "PPEGlovePairStateTests.RejectedLogicalEquip_RollsBackOnlySecondSideAndCanRetry(True,Right)",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "PPEGlovePairStateTests.ResetAfterPartialCompletion_RestoresBothSidesAndAllowsNewAttempt",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "PPEGlovePairStateTests.WrongSequence_PreservesBothPhysicalMembers",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "PPEPortfolioSequenceTests.ContentsInspection_AloneDoesNotSkipDonning_AndResetClearsIt",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "PPEPortfolioSequenceTests.DefaultOrder_SeparatesDonningFromPreparation_AndCompletesOnce",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "PPEPortfolioSequenceTests.DuplicateCompletion_DoesNotSkipTheNextStep",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "PPEPortfolioSequenceTests.EquipmentManager_RejectsWrongOrder_ThenRegistersCorrectItemOnce",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "PPEPortfolioSequenceTests.InvalidItemId_IsRejected(null)",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "PPEPortfolioSequenceTests.InvalidItemId_IsRejected(\"\")",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "PPEPortfolioSequenceTests.InvalidItemId_IsRejected(\"UnknownEquipment\")",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "PPEPortfolioSequenceTests.PreparationChange_IsIdempotent_AndNotReportedAsWearable",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "PPEPortfolioSequenceTests.RecordedPartialLoadout_RemainsAuthoritative_WhenRoomManagersAreMissing",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "PPEPortfolioSequenceTests.RoomReset_ClearsItemManagerSequenceAndPreparationState",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "PPEPortfolioSequenceTests.WrongOrder_DoesNotAdvanceOrComplete(ProtectiveSuit)",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "PPEPortfolioSequenceTests.WrongOrder_DoesNotAdvanceOrComplete(ResponseBag)",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "PPEPortfolioSequenceTests.WrongOrder_DoesNotAdvanceOrComplete(WasteContainer)",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "ResponseBagPackingTests.AllPacked_RequiresEachOfTheThreeItems(0)",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "ResponseBagPackingTests.AllPacked_RequiresEachOfTheThreeItems(1)",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "ResponseBagPackingTests.AllPacked_RequiresEachOfTheThreeItems(2)",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "ResponseBagPackingTests.DisabledCallbackOrInteractable_RejectsFinalGrip(True)",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "ResponseBagPackingTests.DisabledCallbackOrInteractable_RejectsFinalGrip(False)",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "ResponseBagPackingTests.ExplicitXriSelect_ConfirmsFullyPackedBag",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "ResponseBagPackingTests.LegacyActivate_RequiresTheEventInteractorToTargetTheBag",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "ResponseBagPackingTests.LegacyNoArgumentApi_StillRequiresLiveTarget",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "ResponseBagPackingTests.LegacyWearableFallback_CannotEquipStickyPackedBagElsewhere",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "ResponseBagPackingTests.LegacyWearableFallback_StillEquipsAnAllowedNonBagItem",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "ResponseBagPackingTests.PackingGrip_DuringDonning_DoesNotSkipSequence",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "ResponseBagPackingTests.PackingGrip_WithMissingItem_DoesNotPrepare",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "ResponseBagPackingTests.ReleaseInsideBag_StoresEachItemOnce_AndWaitsForFinalGrip",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "ResponseBagPackingTests.ResetResponseBag_ClearsPreparedContentsAndStaleTriggerContacts",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "ResponseBagPackingTests.SharedSelect_FromHoveringHand_PreparesExactlyOnce",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "ResponseBagPackingTests.SharedSelect_FromOtherHand_DoesNotPrepare",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "ResponseBagPackingTests.SharedSelect_WithoutLiveBagTarget_DoesNotPrepare",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "ResponseBagPackingTests.SharedTrigger_WhileHovering_DoesNotPrepare",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "ResponseBagPackingTests.StandaloneRouter_OtherHandCannotUseStickySelectionBypass",
+      "runState": "Runnable",
+      "skipReason": ""
+    },
+    {
+      "fullName": "ResponseBagPackingTests.StickySelection_AfterHoverExit_DoesNotPrepare",
+      "runState": "Runnable",
+      "skipReason": ""
+    }
+  ],
+  "discoveryError": "",
+  "tintExpectedRgba": [
+    "0.378",
+    "0.495",
+    "0.492",
+    "1"
+  ],
+  "tintActualRgba": [
+    "0.377999961",
+    "0.494999945",
+    "0.491999924",
+    "1"
+  ],
+  "tintMaximumChannelDelta": 8.940696716308594e-08,
+  "tintDiagnosticError": ""
+}

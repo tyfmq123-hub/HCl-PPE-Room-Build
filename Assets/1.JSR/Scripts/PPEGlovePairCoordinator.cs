@@ -424,6 +424,8 @@ public sealed class PPEGlovePairCoordinator : MonoBehaviour
         }
         if (member.GloveSide != PPEGrabHand.Left && member.GloveSide != PPEGrabHand.Right)
             return false;
+        if (!OwnsMember(member))
+            return false;
 
         var sequence = PPESequenceManager.Resolve();
         if (sequence != null && !sequence.CanEquip(LogicalItem.ItemId))
@@ -474,16 +476,7 @@ public sealed class PPEGlovePairCoordinator : MonoBehaviour
             " PhysicalActive=" + member.gameObject.activeSelf,
             this);
 
-        if (!BothEquipped || logicalEquipCompleted)
-            return true;
-
-        var manager = ResolveEquipmentManager();
-        if (manager == null)
-            return false;
-
-        logicalEquipCompleted = manager.Equip(LogicalItem);
-        ApplyWearableVisual();
-        return logicalEquipCompleted;
+        return CompleteLogicalPairOrRollback(member);
     }
 
     public bool NotifyPairSideFromRelease(PPEGlovePairMember member)
@@ -498,6 +491,8 @@ public sealed class PPEGlovePairCoordinator : MonoBehaviour
         if (member == null || LogicalItem == null)
             return false;
         if (member.GloveSide != PPEGrabHand.Left && member.GloveSide != PPEGrabHand.Right)
+            return false;
+        if (!OwnsMember(member))
             return false;
 
         var sequence = PPESequenceManager.Resolve();
@@ -536,18 +531,45 @@ public sealed class PPEGlovePairCoordinator : MonoBehaviour
             " RightEquipped=" + rightEquipped,
             this);
 
-        if (BothEquipped && !logicalEquipCompleted)
-        {
-            var manager = ResolveEquipmentManager();
-            if (manager != null)
-            {
-                logicalEquipCompleted = manager.Equip(LogicalItem);
-                ApplyWearableVisual();
-            }
-        }
+        if (!CompleteLogicalPairOrRollback(member))
+            return false;
 
         StartCoroutine(DisableInnerGloveMemberEndOfFrame(member));
         return true;
+    }
+
+    bool OwnsMember(PPEGlovePairMember member)
+    {
+        return member.Coordinator == this &&
+               (member.GloveSide == PPEGrabHand.Left ? member == leftMember : member == rightMember);
+    }
+
+    bool CompleteLogicalPairOrRollback(PPEGlovePairMember completedMember)
+    {
+        if (!BothEquipped || logicalEquipCompleted)
+            return true;
+
+        var manager = ResolveEquipmentManager();
+        logicalEquipCompleted = manager != null && manager.Equip(LogicalItem);
+        if (logicalEquipCompleted)
+        {
+            ApplyWearableVisual();
+            return true;
+        }
+
+        // Equip requires BothEquipped during registration. If it rejects the
+        // tentative second side, restore only that side so it can be retried.
+        // The first side and its physical donning remain valid.
+        if (completedMember.GloveSide == PPEGrabHand.Left)
+            leftEquipped = false;
+        else
+            rightEquipped = false;
+        debugCompleteSideSucceeded = false;
+        RestorePhysicalMember(completedMember);
+        ApplyWearableVisual();
+        Debug.Log("[PPE Pair] Logical Equip failed; restored " + completedMember.GloveSide +
+                  " for retry. Item=" + LogicalItem.ItemId, this);
+        return false;
     }
 
     /// <summary>

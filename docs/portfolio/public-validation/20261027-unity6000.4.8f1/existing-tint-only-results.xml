@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<test-run id="2" testcasecount="1" result="Failed(Child)" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-27 04:44:28Z" end-time="2026-10-27 04:44:28Z" duration="0.0327418">
+  <test-suite type="TestSuite" id="1000" name="VR Test" fullname="VR Test" runstate="Runnable" testcasecount="218" result="Failed" site="Child" start-time="2026-10-27 04:44:28Z" end-time="2026-10-27 04:44:28Z" duration="0.032742" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <failure>
+      <message>One or more child tests had errors</message>
+    </failure>
+    <test-suite type="Assembly" id="1155" name="Assembly-CSharp-Editor.dll" fullname="&lt;VALIDATION_PROJECT&gt;/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll" runstate="Runnable" testcasecount="129" result="Failed" site="Child" start-time="2026-10-27 04:44:28Z" end-time="2026-10-27 04:44:28Z" duration="0.026058" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="39184" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <failure>
+        <message>One or more child tests had errors</message>
+      </failure>
+      <test-suite type="TestFixture" id="1023" name="PPEInnerGloveHandTintTests" fullname="PPEInnerGloveHandTintTests" classname="PPEInnerGloveHandTintTests" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2026-10-27 04:44:28Z" end-time="2026-10-27 04:44:28Z" duration="0.024527" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message>One or more child tests had errors</message>
+        </failure>
+        <test-case id="1024" name="ApplyToHand_TintsThenRestoresDefaultHandColor" fullname="PPEInnerGloveHandTintTests.ApplyToHand_TintsThenRestoresDefaultHandColor" methodname="ApplyToHand_TintsThenRestoresDefaultHandColor" classname="PPEInnerGloveHandTintTests" runstate="Runnable" seed="1460883992" result="Failed" start-time="2026-10-27 04:44:28Z" end-time="2026-10-27 04:44:28Z" duration="0.016302" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <failure>
+            <message>  Expected: RGBA(0.378, 0.495, 0.492, 1.000)
+  But was:  RGBA(0.378, 0.495, 0.492, 1.000)
+</message>
+            <stack-trace>at PPEInnerGloveHandTintTests.ApplyToHand_TintsThenRestoresDefaultHandColor () [0x00027] in &lt;VALIDATION_PROJECT&gt;\Assets\1.JSR\Editor\PPEInnerGloveHandTintTests.cs:19
+</stack-trace>
+          </failure>
+          <output>Saving results to: &lt;USER_HOME&gt;/AppData/LocalLow/DefaultCompany/VR Test\TestResults.xml
+</output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

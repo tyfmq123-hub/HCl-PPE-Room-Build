@@ -220,7 +220,9 @@ public class XRInteractionConfirmRouter : MonoBehaviour
         // packed. Near/Far hand interactors are not XRRayInteractor instances, so
         // route their hovered Grip before the generic sticky PPE selection flow.
         if (responseBagPrepareInteractable != null
-            && responseBagPrepareInteractable.TryPrepareFromPackingGripHover())
+            && responseBagPrepareInteractable.TryPrepareFromPackingGripHover(
+                inputHand == ControllerHand.Left ? SharedXRHand.Left :
+                inputHand == ControllerHand.Right ? SharedXRHand.Right : (SharedXRHand?)null))
         {
             lastRoutedAt = Time.unscaledTime;
             return;
@@ -239,6 +241,7 @@ public class XRInteractionConfirmRouter : MonoBehaviour
 
         // Priority 1: world response bag sticky selection.
         if (responseBagPrepareInteractable != null
+            && ResponseBagPackingController.Instance == null
             && responseBagPrepareInteractable.CanConfirmPreparation())
         {
             if (responseBagPrepareInteractable.TryPrepareFromConfirmRouter())
@@ -259,11 +262,24 @@ public class XRInteractionConfirmRouter : MonoBehaviour
         // placement and can be disabled after headset validation is complete.
         if (allowLegacyWearableEquipFallback
             && ppeSelectionManager != null
+            && !IsPackingBagSelection()
             && ppeSelectionManager.HasValidEquipSelection(legacyEquipConfirmDelay)
             && ppeSelectionManager.TryEquipCurrentSelection())
         {
             lastRoutedAt = Time.unscaledTime;
         }
+    }
+
+    bool IsPackingBagSelection()
+    {
+        if (ResponseBagPackingController.Instance == null || ppeSelectionManager == null)
+            return false;
+
+        var selected = ppeSelectionManager.CurrentSelectedPPE;
+        var item = selected != null ? selected.GetComponentInParent<PPEEquipable>(true) : null;
+        // A legacy wearable fallback must not route a stale bag selection back
+        // through PPEEquipmentManager.Equip and bypass the live final-Grip gate.
+        return item != null && item.ItemId == PPEEquipmentManager.IdResponseBag;
     }
 
     bool TrySelectHoveredOutline(ControllerHand inputHand)
